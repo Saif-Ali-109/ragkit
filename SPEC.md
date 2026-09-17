@@ -48,6 +48,7 @@ lever remains OFF). Tasks and exit criteria → PLAN.md §2.
 |---|---|
 | 2026-09-17 | Separate repo (this one); DocPilot dogfoods ragkit; core chain first; installable, no CI/PyPI |
 | 2026-09-17 | Package layout mirrors source: `docpilot.<sub>.<mod>` → `ragkit.<sub>.<mod>` (mechanical prefix swap) |
+| 2026-09-18 | Stage-1 gate is the **combined** DocPilot + ragkit pytest count ≥ baseline 552 (unit tests live only in ragkit; no duplicated test files) |
 
 ## 5. Conflict resolution
 

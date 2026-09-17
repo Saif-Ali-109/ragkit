@@ -39,12 +39,16 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       (moved 16 modules + `db/schema.sql` + 11 unit tests; prefix swap
       verified byte-mechanical; moved suite green in the DocPilot venv:
       182 passed, 1 skipped — model/DB hermetic skips)
-- [ ] S1-T3 DocPilot rewire (imports → ragkit; delete moved modules from
-      `src/docpilot/`; grep-verify zero moved-prefix imports left)
+- [x] S1-T3 DocPilot rewire (imports → ragkit; delete moved modules from
+      `src/docpilot/`; grep-verify zero moved-prefix imports left) — DONE
+      2026-09-18 (src + tests rewired; 11 moved unit tests deleted from
+      DocPilot; pyproject git pin `@ed0f908`; DocPilot suite green 369,
+      ragkit 183 → combined 552)
 - [ ] S1-T4 connection semantics ownership (ragkit owns DSN→conn); decide
       `db/maintenance.py` home
 - [ ] S1-T5 ragkit standalone test suite green (hermetic — no model/network)
-- [ ] S1-T6 DocPilot full suite green on ragkit imports (≥ baseline 552)
+- [ ] S1-T6 combined DocPilot + ragkit suite green on ragkit imports
+      (≥ baseline 552; unit tests live in ragkit only)
 - [ ] S1-T7 retrieval parity evidence (same-process top-k identical pre/post)
 - [ ] S1-T8 exit sweep: READMEs honest, tag `v0.1.0`, DocPilot pin ↔ tag
       recorded
@@ -54,7 +58,8 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
 - [ ] installable from git; `import ragkit` works in a clean venv
 - [ ] DocPilot has zero copies of the moved modules (grep-verified, no shims)
 - [ ] ragkit standalone test suite green
-- [ ] DocPilot full suite green (≥ 552)
+- [ ] combined DocPilot + ragkit suite green (≥ 552; unit tests live in
+      ragkit only)
 - [ ] retrieval parity evidence committed
 - [ ] version pairing recorded; both repos pushed; no secrets
 

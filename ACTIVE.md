@@ -7,9 +7,11 @@ load: read whole
 ## 1. Status
 
 - current_stage: Stage 1 — core chain, ACTIVE (entered 2026-09-17)
-- last_updated: 2026-09-17
-- test baseline: none yet — the ragkit suite lands with S1-T5
-- gate reference: DocPilot full suite 552 passing (pre-extraction)
+- last_updated: 2026-09-18
+- test baseline: ragkit 183 (182 passed, 1 skipped) + DocPilot 369 = 552
+  combined (pre-extraction baseline)
+- gate reference: combined DocPilot + ragkit suite ≥ 552 (locked 2026-09-18;
+  unit tests live in ragkit only)
 
 ## 2. What happened (work state)
 
@@ -27,8 +29,13 @@ load: read whole
   Fixed stale venv `.pth` editable paths (→ current repo locations) so the
   DocPilot venv resolves both packages; moved suite green there (182 passed,
   1 skipped — model/PostgreSQL hermetic skips).
-- Next: S1-T3 — DocPilot rewire to `ragkit` imports, delete moved modules
-  from `src/docpilot/`, grep-verify zero moved-prefix imports left.
+- 2026-09-18 S1-T3: DocPilot dogfood rewire — `src/docpilot/` + `tests/`
+  imports switched to `ragkit.*`, the moved modules and their 11 unit-test
+  files deleted (no duplication), pyproject pins ragkit `@ed0f908`. DocPilot
+  suite green (369); ragkit 183 → combined 552. Gate interpretation locked
+  (SPEC §4): combined count, unit tests in ragkit only.
+- Next: S1-T4 — connection semantics (ragkit owns DSN→conn for PgVectorStore,
+  DocPilot delegates; decide `db/maintenance.py` home).
 
 ## 3. Load index
 
