@@ -34,8 +34,11 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       `import ragkit` verified)
 - [x] S1-T1b self-docs — DONE 2026-09-17 (this SPEC/PLAN/ACTIVE trio +
       README pointer, so the framework repo is self-explanatory)
-- [ ] S1-T2 move the §2.1 modules (mechanical `docpilot.` → `ragkit.` prefix
-      swap) + move their unit tests into `tests/`
+- [x] S1-T2 move the §2.1 modules (mechanical `docpilot.` → `ragkit.` prefix
+      swap) + move their unit tests into `tests/` — DONE 2026-09-17
+      (moved 16 modules + `db/schema.sql` + 11 unit tests; prefix swap
+      verified byte-mechanical; moved suite green in the DocPilot venv:
+      182 passed, 1 skipped — model/DB hermetic skips)
 - [ ] S1-T3 DocPilot rewire (imports → ragkit; delete moved modules from
       `src/docpilot/`; grep-verify zero moved-prefix imports left)
 - [ ] S1-T4 connection semantics ownership (ragkit owns DSN→conn); decide

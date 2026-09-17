@@ -20,8 +20,15 @@ load: read whole
   main; editable-installed into the DocPilot venv; `import ragkit` verified.
 - 2026-09-17 S1-T1b: self-docs trio added (SPEC.md + PLAN.md + this file) +
   README pointer.
-- Next: S1-T2 — move the core-chain modules (`docpilot.` → `ragkit.` prefix
-  swap) and their unit tests into ragkit.
+- 2026-09-17 S1-T2: moved the §2.1 core-chain modules into `src/ragkit/`
+  (`docpilot.` → `ragkit.` mechanical prefix swap; `docpilot.config` and
+  DocPilot app-glue docstring refs kept DocPilot-side) + the 11 unit-test
+  files (+conftest) into `tests/`; reverse-swap diff proves byte-mechanical.
+  Fixed stale venv `.pth` editable paths (→ current repo locations) so the
+  DocPilot venv resolves both packages; moved suite green there (182 passed,
+  1 skipped — model/PostgreSQL hermetic skips).
+- Next: S1-T3 — DocPilot rewire to `ragkit` imports, delete moved modules
+  from `src/docpilot/`, grep-verify zero moved-prefix imports left.
 
 ## 3. Load index
 
