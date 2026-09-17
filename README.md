@@ -12,3 +12,9 @@ staying green — not by new claims.
 - Scope: core chain first (Stage 1); agentic layer, eval harness, and codegen
   follow as later stages (DocPilot PLAN §8).
 - No CI or PyPI publishing yet.
+
+## Docs (framework self-documentation)
+
+- **SPEC.md** — source of truth: purpose, stages, locked decisions
+- **PLAN.md** — working state: tasks, exit checklists
+- **ACTIVE.md** — current view: stage, what happened, load index
