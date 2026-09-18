@@ -114,18 +114,21 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
 ### 3.2 tasks (execution order)
 - [x] S2-T1: docs — scope + task list + ACTIVE refresh, committed in both
       repos — DONE 2026-09-18 (ragkit PLAN §3 / DocPilot PLAN §8.7)
-- [ ] S2-T2: move mechanically (prefix swap) into `ragkit.agent` /
+- [x] S2-T2: move mechanically (prefix swap) into `ragkit.agent` /
       `ragkit.tools`; extend `ragkit.config` with the 10 keys; graph.py
       `_NO_CONTEXT_NOTE` from `ragkit.core.direct`; langgraph dep; 6
-      hermetic agent/tool test files move
-- [ ] S2-T3: DocPilot dogfood — rewire cli/api/eval/code_route + staying
+      hermetic agent/tool test files move — DONE 2026-09-18
+      (`3ded3fb`; ragkit 299 passed/1 skipped, 290/10 hermetic)
+- [x] S2-T3: DocPilot dogfood — rewire cli/api/eval/code_route + staying
       tests to `ragkit.agent.*` / `ragkit.tools.*`; delete moved modules +
       tests; DocPilot config re-exports the 10 keys; pin bump; combined
-      suite green
-- [ ] S2-T4: agentic parity evidence — hermetic determinism harness (fakes,
+      suite green — DONE 2026-09-18 (DocPilot `b2983de` → ragkit
+      `@3ded3fb`; DocPilot 252 + ragkit 300 = 552 ≥ baseline)
+- [x] S2-T4: agentic parity evidence — hermetic determinism harness (fakes,
       fixed queries: routing, judge-retry, fake-tool live path): full trace
       identical pre (`docpilot.agent` @ Stage-2 start) vs post
-      (`ragkit.agent`); + one live CLI/API smoke
+      (`ragkit.agent`); + one live CLI/API smoke — DONE 2026-09-18
+      (`ed58c54`; 6/6 scenarios IDENTICAL; live CLI smoke exit 0)
 - [ ] S2-T5: exit sweep — READMEs honest, clean-venv install from git
       (langgraph), tag `v0.2.0`, DocPilot pin ↔ tag recorded, §3.3 all
       `[x]`, both repos pushed
