@@ -56,21 +56,35 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       (ragkit 191 = 181 passed, 10 skipped / DocPilot 361). Restores
       hermeticity: ragkit's live-PG integration tests skip under a bare
       environment instead of borrowing DocPilot's `.env`.
-- [ ] S1-T5 ragkit standalone test suite green (hermetic — no model/network)
-- [ ] S1-T6 combined DocPilot + ragkit suite green on ragkit imports
-      (≥ baseline 552; unit tests live in ragkit only)
-- [ ] S1-T7 retrieval parity evidence (same-process top-k identical pre/post)
+- [x] S1-T5 ragkit standalone test suite green (hermetic — no model/network)
+      — DONE 2026-09-18: ragkit suite 181 passed, 10 skipped from its own
+      root; every skip is a hermetic availability skip (1 real-corpus-not-
+      cloned, 6 live-PG retriever/hybrid, 3 maintenance integration) — no
+      model/network access needed
+- [x] S1-T6 combined DocPilot + ragkit suite green on ragkit imports
+      (≥ baseline 552; unit tests live in ragkit only) — DONE 2026-09-18:
+      re-verified after S1-T4 at the committed state — ragkit 191 (181
+      passed, 10 skipped) + DocPilot 361 = 552
+- [x] S1-T7 retrieval parity evidence (same-process top-k identical pre/post)
+      — DONE 2026-09-18: live same-process run — pre-extraction monolith
+      `docpilot@69f91dc` (git worktree) vs post-extraction
+      `docpilot@ebbdefa` + `ragkit@34686e2`, both against the same live PG
+      corpus (15,319 chunks), same call site
+      (`pipeline_ask._build_default_retriever()`), BGE-small, top_k=5,
+      language=en, levers off. 30 benchmark queries →
+      **30/30 top-k IDENTICAL** (harness + evidence in `parity/`). CLI/API
+      smoke: `python -m docpilot ask ...` exit 0 with a cited answer
 - [ ] S1-T8 exit sweep: READMEs honest, tag `v0.1.0`, DocPilot pin ↔ tag
       recorded
 
 ### 2.3 exit criteria (checked at stage close)
 
 - [ ] installable from git; `import ragkit` works in a clean venv
-- [ ] DocPilot has zero copies of the moved modules (grep-verified, no shims)
-- [ ] ragkit standalone test suite green
-- [ ] combined DocPilot + ragkit suite green (≥ 552; unit tests live in
-      ragkit only)
-- [ ] retrieval parity evidence committed
+- [x] DocPilot has zero copies of the moved modules (grep-verified, no shims)
+- [x] ragkit standalone test suite green (S1-T5: 181 passed, 10 hermetic skips)
+- [x] combined DocPilot + ragkit suite green (≥ 552; unit tests live in
+      ragkit only) — S1-T6: ragkit 191 + DocPilot 361 = 552
+- [x] retrieval parity evidence committed (`parity/`, 30/30 top-k identical)
 - [ ] version pairing recorded; both repos pushed; no secrets
 
 ## 3. Stage 2 — agentic (planned)

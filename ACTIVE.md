@@ -48,8 +48,17 @@ load: read whole
   skipped) + DocPilot 361 = 552. Hermeticity restored: ragkit's live-PG
   integration tests skip under a bare environment (were passing only by
   borrowing DocPilot's `.env` via the old reverse import).
-- Next: S1-T5 — ragkit standalone test suite green (hermetic; the 10 skips
-  are model/PostgreSQL-availability skips, exactly the hermetic target).
+- 2026-09-18 S1-T5/T6/T7: Stage-1 verification passes — standalone hermetic
+  suite green (181 passed, 10 availability skips); combined 552 re-verified
+  at the committed state (ragkit 191 + DocPilot 361); retrieval parity
+  evidence — live same-process run, pre-extraction monolith
+  `docpilot@69f91dc` (git worktree) vs post `docpilot@ebbdefa` +
+  `ragkit@34686e2` against the same live PG corpus (15,319 chunks, BGE-small,
+  top_k=5, language=en, levers off): 30 benchmark queries → **30/30 top-k
+  IDENTICAL**; CLI/API smoke exit 0 with cited answer. Harness + evidence in
+  `parity/`.
+- Next: S1-T8 — exit sweep (`v0.1.0` tag, DocPilot pin ↔ tag, clean-venv
+  install check, README honesty) → pause for review.
 
 ## 3. Load index
 
