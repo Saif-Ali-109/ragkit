@@ -129,17 +129,29 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       identical pre (`docpilot.agent` @ Stage-2 start) vs post
       (`ragkit.agent`); + one live CLI/API smoke — DONE 2026-09-18
       (`ed58c54`; 6/6 scenarios IDENTICAL; live CLI smoke exit 0)
-- [ ] S2-T5: exit sweep — READMEs honest, clean-venv install from git
+- [x] S2-T5: exit sweep — READMEs honest, clean-venv install from git
       (langgraph), tag `v0.2.0`, DocPilot pin ↔ tag recorded, §3.3 all
-      `[x]`, both repos pushed
+      `[x]`, both repos pushed — DONE 2026-09-18 (tag `v0.2.0` =
+      `500717d`; clean venv from `git+…ragkit.git@v0.2.0` — deps incl.
+      langgraph 1.2.11 resolved, imports OK, `docpilot` not importable;
+      DocPilot pin → `@v0.2.0`; both repos pushed)
 
 ### 3.3 exit criteria (checked at stage close)
-- [ ] ragkit standalone test suite green (agent/tools tests included, hermetic)
-- [ ] combined DocPilot + ragkit suite green; moved unit tests live in
-      ragkit only
-- [ ] agentic parity evidence committed (hermetic harness + live smoke)
-- [ ] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.2.0`);
-      READMEs honest; both repos pushed; no secrets
+- [x] ragkit standalone test suite green (agent/tools tests included,
+      hermetic) — DONE: 299 passed/1 skipped with dev `.env`; 290
+      passed/10 skipped bare (all skips hermetic availability)
+- [x] combined DocPilot + ragkit suite green; moved unit tests live in
+      ragkit only — DONE: DocPilot 252 + ragkit 300 = 552 (= Stage-1
+      baseline, 109 tests relocated, zero loss); zero `docpilot.agent` /
+      `docpilot.tools` refs left in DocPilot src/tests, no shims
+- [x] agentic parity evidence committed (hermetic harness + live smoke)
+      — DONE: `parity/s2_agentic_parity_report.md` 6/6 scenarios
+      IDENTICAL + `s2_cli_smoke.txt` (exit 0)
+- [x] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.2.0`);
+      READMEs honest; both repos pushed; no secrets — DONE: DocPilot
+      pin → `@v0.2.0` ↔ tag `v0.2.0` (`500717d`); clean-venv install
+      from the tag verified; dirty eval reports + `opencode.jsonc`
+      remain uncommitted on the DocPilot side
 
 ## 4. Stage 3 — eval harness (planned)
 
