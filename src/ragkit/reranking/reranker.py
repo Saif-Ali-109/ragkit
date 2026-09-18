@@ -53,7 +53,7 @@ class BCEReranker(Reranker):
     """
 
     def __init__(self, model_name: str | None = None) -> None:
-        from docpilot import config
+        from ragkit import config
 
         self._model_name = model_name or config.RERANKER_MODEL
         self._model = None  # lazy-loaded

@@ -75,7 +75,7 @@ class SimpleRetriever(Retriever):
             descending reranked relevance.
         """
         if top_k is None:
-            from docpilot import config
+            from ragkit import config
             top_k = config.RETRIEVAL_TOP_K
 
         # Embed the query (single-element list)
@@ -100,6 +100,6 @@ class SimpleRetriever(Retriever):
 
 
 def _rerank_candidates_default() -> int:
-    from docpilot import config
+    from ragkit import config
 
     return config.RERANK_CANDIDATES

@@ -9,7 +9,7 @@ import time
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
-from docpilot import config
+from ragkit import config
 from ragkit.generation.prompts import SYSTEM_PROMPT
 
 logger = logging.getLogger(__name__)

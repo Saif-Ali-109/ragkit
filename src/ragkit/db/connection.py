@@ -16,7 +16,7 @@ from typing import Generator
 
 import psycopg
 
-from docpilot import config
+from ragkit import config
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +26,7 @@ _SCHEMA_SQL_PATH = Path(__file__).resolve().parent / "schema.sql"
 def get_connection() -> psycopg.Connection:
     """Return a new psycopg 3 Connection to the DocPilot PostgreSQL database.
 
-    The connection uses the credentials from ``docpilot.config`` (POSTGRES_* keys).
+    The connection uses the credentials from ``ragkit.config`` (POSTGRES_* keys).
     The caller is responsible for closing the connection.
     """
     conn = psycopg.connect(

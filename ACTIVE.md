@@ -8,8 +8,8 @@ load: read whole
 
 - current_stage: Stage 1 — core chain, ACTIVE (entered 2026-09-17)
 - last_updated: 2026-09-18
-- test baseline: ragkit 183 (182 passed, 1 skipped) + DocPilot 369 = 552
-  combined (pre-extraction baseline)
+- test baseline: combined 552 (pre-extraction); current split ragkit 191
+  (181 passed, 10 skipped) + DocPilot 361
 - gate reference: combined DocPilot + ragkit suite ≥ 552 (locked 2026-09-18;
   unit tests live in ragkit only)
 
@@ -34,8 +34,22 @@ load: read whole
   files deleted (no duplication), pyproject pins ragkit `@ed0f908`. DocPilot
   suite green (369); ragkit 183 → combined 552. Gate interpretation locked
   (SPEC §4): combined count, unit tests in ragkit only.
-- Next: S1-T4 — connection semantics (ragkit owns DSN→conn for PgVectorStore,
-  DocPilot delegates; decide `db/maintenance.py` home).
+- 2026-09-18 S1-T4: connection semantics ownership — added `ragkit/config.py`
+  owning the framework keys the core chain reads (POSTGRES_*, EMBEDDING_MODEL,
+  GROQ_API_KEY/MODEL/MAX_RETRIES, RERANKER_MODEL, RERANK_CANDIDATES,
+  RETRIEVAL_TOP_K): env-read with safe defaults, no import hard-fail, so
+  `import ragkit` works standalone. Core-chain modules switched from
+  `from docpilot import config` → `from ragkit import config` (reverse
+  dependency gone; grep-verified). DocPilot config re-exports the non-secret
+  keys; `docpilot/__init__.py` loads `.env` before any ragkit.config read.
+  Moved `db/maintenance.py` + its SQL/integration tests into `ragkit.db`;
+  DocPilot's dedupe CLI uses `ragkit.db.maintenance` (dry-run wiring tests
+  stay DocPilot-side). Combined gate green: ragkit 191 (181 passed, 10
+  skipped) + DocPilot 361 = 552. Hermeticity restored: ragkit's live-PG
+  integration tests skip under a bare environment (were passing only by
+  borrowing DocPilot's `.env` via the old reverse import).
+- Next: S1-T5 — ragkit standalone test suite green (hermetic; the 10 skips
+  are model/PostgreSQL-availability skips, exactly the hermetic target).
 
 ## 3. Load index
 

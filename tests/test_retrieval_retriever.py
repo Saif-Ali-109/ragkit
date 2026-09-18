@@ -365,9 +365,9 @@ class TestRerankedRetriever:
         assert len(out) == 3
 
     def test_default_candidates_from_config(self, monkeypatch) -> None:
-        import docpilot.config as docpilot_config
+        import ragkit.config as ragkit_config
 
-        monkeypatch.setattr(docpilot_config, "RERANK_CANDIDATES", 6)
+        monkeypatch.setattr(ragkit_config, "RERANK_CANDIDATES", 6)
         retriever, store = self._make_retriever(FakeReranker(), candidates=None)
         retriever.retrieve("q", top_k=3)
         assert store.last_search_top_k == 6

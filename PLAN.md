@@ -44,8 +44,18 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       2026-09-18 (src + tests rewired; 11 moved unit tests deleted from
       DocPilot; pyproject git pin `@ed0f908`; DocPilot suite green 369,
       ragkit 183 → combined 552)
-- [ ] S1-T4 connection semantics ownership (ragkit owns DSN→conn); decide
-      `db/maintenance.py` home
+- [x] S1-T4 connection semantics ownership (ragkit owns DSN→conn; decide
+      `db/maintenance.py` home) — DONE 2026-09-18: `ragkit/config.py` owns the
+      framework keys (POSTGRES_*, EMBEDDING_MODEL, GROQ_*, RERANKER_MODEL,
+      RERANK_CANDIDATES, RETRIEVAL_TOP_K) — env-read with safe defaults, no
+      import hard-fail; core-chain modules read `ragkit.config` (reverse
+      docpilot dependency gone); DocPilot re-exports the non-secret keys and
+      loads `.env` before ragkit.config (`docpilot/__init__.py`);
+      `db/maintenance.py` + its SQL/integration tests moved into `ragkit.db`;
+      DocPilot dedupe CLI uses `ragkit.db.maintenance`. Combined 552 green
+      (ragkit 191 = 181 passed, 10 skipped / DocPilot 361). Restores
+      hermeticity: ragkit's live-PG integration tests skip under a bare
+      environment instead of borrowing DocPilot's `.env`.
 - [ ] S1-T5 ragkit standalone test suite green (hermetic — no model/network)
 - [ ] S1-T6 combined DocPilot + ragkit suite green on ragkit imports
       (≥ baseline 552; unit tests live in ragkit only)
