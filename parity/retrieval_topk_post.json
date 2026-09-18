@@ -1,0 +1,978 @@
+{
+  "meta": {
+    "mode": "post",
+    "docpilot_commit": "ebbdefa",
+    "ragkit_commit": "34686e2",
+    "chunks_count": 15319,
+    "top_k": 5,
+    "retrieval_language": "en",
+    "rerank_enabled": false,
+    "hybrid_enabled": false,
+    "timestamp": "2026-09-18T15:50:55.958001+00:00",
+    "build_elapsed_s": 0.21,
+    "retrieve_elapsed_s": 17.237,
+    "queries_count": 30
+  },
+  "results": {
+    "bd01": [
+      {
+        "id": "e0e8ea8d71f7",
+        "source_file": "en/docs/tutorial/query-params-str-validations.md",
+        "chunk_index": 5,
+        "score": 0.8659792622340303
+      },
+      {
+        "id": "76f05c8ebd34",
+        "source_file": "en/docs/tutorial/query-params.md",
+        "chunk_index": 2,
+        "score": 0.8639732003212036
+      },
+      {
+        "id": "bbb12c5ec4c1",
+        "source_file": "en/docs/tutorial/query-params-str-validations.md",
+        "chunk_index": 0,
+        "score": 0.8348365327618454
+      },
+      {
+        "id": "ce63bd03074f",
+        "source_file": "en/docs/tutorial/body.md",
+        "chunk_index": 9,
+        "score": 0.8309078959442288
+      },
+      {
+        "id": "ab071963b78a",
+        "source_file": "en/docs/tutorial/body-multiple-params.md",
+        "chunk_index": 1,
+        "score": 0.8288094299322042
+      }
+    ],
+    "bd02": [
+      {
+        "id": "dafa81a755c2",
+        "source_file": "en/docs/tutorial/path-params.md",
+        "chunk_index": 17,
+        "score": 0.8670242687173066
+      },
+      {
+        "id": "4c3013e92450",
+        "source_file": "en/docs/advanced/using-request-directly.md",
+        "chunk_index": 2,
+        "score": 0.8363468202662638
+      },
+      {
+        "id": "fb93d160079a",
+        "source_file": "en/docs/tutorial/body.md",
+        "chunk_index": 8,
+        "score": 0.8335854560362244
+      },
+      {
+        "id": "7289e59aafca",
+        "source_file": "en/docs/tutorial/query-params.md",
+        "chunk_index": 4,
+        "score": 0.8306541589487371
+      },
+      {
+        "id": "ce63bd03074f",
+        "source_file": "en/docs/tutorial/body.md",
+        "chunk_index": 9,
+        "score": 0.8305092251907871
+      }
+    ],
+    "bd03": [
+      {
+        "id": "2d322f799ae3",
+        "source_file": "en/docs/tutorial/response-model.md",
+        "chunk_index": 2,
+        "score": 0.8474893064803434
+      },
+      {
+        "id": "48c3fb5f0291",
+        "source_file": "en/docs/advanced/response-cookies.md",
+        "chunk_index": 0,
+        "score": 0.8211954725501237
+      },
+      {
+        "id": "e4cf4df07391",
+        "source_file": "en/docs/advanced/response-directly.md",
+        "chunk_index": 2,
+        "score": 0.8210127353668272
+      },
+      {
+        "id": "e759ab5d08f5",
+        "source_file": "en/docs/tutorial/response-model.md",
+        "chunk_index": 12,
+        "score": 0.8205466759530723
+      },
+      {
+        "id": "f9f604b2a277",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 6,
+        "score": 0.8196714627938722
+      }
+    ],
+    "bd04": [
+      {
+        "id": "723591cc95c3",
+        "source_file": "en/docs/reference/background.md",
+        "chunk_index": 0,
+        "score": 0.8405730724334717
+      },
+      {
+        "id": "1a194d0520cf",
+        "source_file": "en/docs/tutorial/background-tasks.md",
+        "chunk_index": 4,
+        "score": 0.8094381321146388
+      },
+      {
+        "id": "f64bb4453a02",
+        "source_file": "en/docs/tutorial/background-tasks.md",
+        "chunk_index": 5,
+        "score": 0.808962881565094
+      },
+      {
+        "id": "a87e0c512de1",
+        "source_file": "en/docs/tutorial/background-tasks.md",
+        "chunk_index": 0,
+        "score": 0.7924857611945739
+      },
+      {
+        "id": "5612501bccc7",
+        "source_file": "en/docs/advanced/additional-status-codes.md",
+        "chunk_index": 0,
+        "score": 0.7823441754374414
+      }
+    ],
+    "bd05": [
+      {
+        "id": "205cead59fe8",
+        "source_file": "en/docs/how-to/custom-request-and-route.md",
+        "chunk_index": 0,
+        "score": 0.812960958094586
+      },
+      {
+        "id": "edf8aae94095",
+        "source_file": "en/docs/tutorial/body.md",
+        "chunk_index": 0,
+        "score": 0.8047276968088569
+      },
+      {
+        "id": "877de073aae8",
+        "source_file": "en/docs/index.md",
+        "chunk_index": 16,
+        "score": 0.8020457625389327
+      },
+      {
+        "id": "a334f102a64d",
+        "source_file": "en/docs/advanced/using-request-directly.md",
+        "chunk_index": 0,
+        "score": 0.8003985046627825
+      },
+      {
+        "id": "1ddf8afbb01e",
+        "source_file": "en/docs/advanced/using-request-directly.md",
+        "chunk_index": 1,
+        "score": 0.7998606205152783
+      }
+    ],
+    "bd06": [
+      {
+        "id": "97dc9b7bb75b",
+        "source_file": "en/docs/tutorial/query-params.md",
+        "chunk_index": 5,
+        "score": 0.8828101297843866
+      },
+      {
+        "id": "24df0cbe64df",
+        "source_file": "en/docs/tutorial/query-params-str-validations.md",
+        "chunk_index": 11,
+        "score": 0.8606086275785171
+      },
+      {
+        "id": "76f05c8ebd34",
+        "source_file": "en/docs/tutorial/query-params.md",
+        "chunk_index": 2,
+        "score": 0.8470552423431883
+      },
+      {
+        "id": "1397b3632298",
+        "source_file": "en/docs/tutorial/query-params-str-validations.md",
+        "chunk_index": 10,
+        "score": 0.8463438519611952
+      },
+      {
+        "id": "bc06beed1288",
+        "source_file": "en/docs/tutorial/body.md",
+        "chunk_index": 2,
+        "score": 0.8369636924353617
+      }
+    ],
+    "bd07": [
+      {
+        "id": "0938c4e1939a",
+        "source_file": "en/docs/tutorial/path-params.md",
+        "chunk_index": 7,
+        "score": 0.8464546891179882
+      },
+      {
+        "id": "59d250484cd5",
+        "source_file": "en/docs/tutorial/security/get-current-user.md",
+        "chunk_index": 7,
+        "score": 0.7899672985076904
+      },
+      {
+        "id": "395f730c90a0",
+        "source_file": "en/docs/advanced/security/oauth2-scopes.md",
+        "chunk_index": 10,
+        "score": 0.7824549908177555
+      },
+      {
+        "id": "8ed5a46fdbd8",
+        "source_file": "en/docs/tutorial/bigger-applications.md",
+        "chunk_index": 2,
+        "score": 0.7819836865673266
+      },
+      {
+        "id": "a71f49f5a919",
+        "source_file": "en/docs/tutorial/security/get-current-user.md",
+        "chunk_index": 0,
+        "score": 0.763461901935227
+      }
+    ],
+    "bd08": [
+      {
+        "id": "d4b04d0e36e9",
+        "source_file": "en/docs/tutorial/cookie-param-models.md",
+        "chunk_index": 1,
+        "score": 0.8550573587417603
+      },
+      {
+        "id": "964412811cca",
+        "source_file": "en/docs/tutorial/cookie-params.md",
+        "chunk_index": 2,
+        "score": 0.8474611225770626
+      },
+      {
+        "id": "9e1df5f5736b",
+        "source_file": "en/docs/reference/response.md",
+        "chunk_index": 0,
+        "score": 0.8227670192718506
+      },
+      {
+        "id": "0a9ca48635ff",
+        "source_file": "en/docs/tutorial/query-param-models.md",
+        "chunk_index": 4,
+        "score": 0.8209988581538895
+      },
+      {
+        "id": "6158dd0d35e1",
+        "source_file": "en/docs/tutorial/cookie-param-models.md",
+        "chunk_index": 4,
+        "score": 0.8159075489099309
+      }
+    ],
+    "bl01": [
+      {
+        "id": "4f71ba7ee13a",
+        "source_file": "en/docs/reference/security/index.md",
+        "chunk_index": 4,
+        "score": 0.7785830861752336
+      },
+      {
+        "id": "b015ebbf577c",
+        "source_file": "en/docs/reference/security/index.md",
+        "chunk_index": 5,
+        "score": 0.7766955894180092
+      },
+      {
+        "id": "1b0f002e18d8",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 615,
+        "score": 0.7765485777527955
+      },
+      {
+        "id": "a92fc7048fdb",
+        "source_file": "en/docs/tutorial/security/first-steps.md",
+        "chunk_index": 6,
+        "score": 0.7680411615322635
+      },
+      {
+        "id": "d4afcfef6562",
+        "source_file": "en/docs/tutorial/security/first-steps.md",
+        "chunk_index": 5,
+        "score": 0.7673402428627069
+      }
+    ],
+    "bl02": [
+      {
+        "id": "abf7cecfec84",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 226,
+        "score": 0.824765373752439
+      },
+      {
+        "id": "0eeced048caf",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 269,
+        "score": 0.8242428302764893
+      },
+      {
+        "id": "1e5041d5c324",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 233,
+        "score": 0.8211051715079066
+      },
+      {
+        "id": "dea88051d99d",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 296,
+        "score": 0.8184294212800624
+      },
+      {
+        "id": "462ce92e4b5d",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 512,
+        "score": 0.8144872674040372
+      }
+    ],
+    "bl03": [
+      {
+        "id": "62fec37a9219",
+        "source_file": "en/docs/history-design-future.md",
+        "chunk_index": 0,
+        "score": 0.8046443941977388
+      },
+      {
+        "id": "854d8f610090",
+        "source_file": "en/docs/advanced/dataclasses.md",
+        "chunk_index": 4,
+        "score": 0.7868422396873107
+      },
+      {
+        "id": "8516fae99a3b",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 621,
+        "score": 0.7729653526010493
+      },
+      {
+        "id": "caa3c3685f42",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 665,
+        "score": 0.7708318233490045
+      },
+      {
+        "id": "196b95d5d36a",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 314,
+        "score": 0.7692331213216127
+      }
+    ],
+    "bl04": [
+      {
+        "id": "abf7cecfec84",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 226,
+        "score": 0.790204631698409
+      },
+      {
+        "id": "0eeced048caf",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 269,
+        "score": 0.7897678017616272
+      },
+      {
+        "id": "1e5041d5c324",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 233,
+        "score": 0.7886374466799182
+      },
+      {
+        "id": "dea88051d99d",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 296,
+        "score": 0.7862516769020764
+      },
+      {
+        "id": "462ce92e4b5d",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 512,
+        "score": 0.7840155830392603
+      }
+    ],
+    "bn01": [
+      {
+        "id": "a8dccd962f01",
+        "source_file": "en/docs/history-design-future.md",
+        "chunk_index": 6,
+        "score": 0.8147858513700237
+      },
+      {
+        "id": "176ca4a8eac7",
+        "source_file": "en/docs/about/index.md",
+        "chunk_index": 0,
+        "score": 0.7957708835601863
+      },
+      {
+        "id": "ceeff07aa703",
+        "source_file": "en/docs/deployment/fastapicloud.md",
+        "chunk_index": 1,
+        "score": 0.7802696693104322
+      },
+      {
+        "id": "c7b800dc40a5",
+        "source_file": "en/docs/management.md",
+        "chunk_index": 2,
+        "score": 0.7781602144241389
+      },
+      {
+        "id": "9076e1d651fe",
+        "source_file": "en/docs/async.md",
+        "chunk_index": 9,
+        "score": 0.7771152257919367
+      }
+    ],
+    "bn02": [
+      {
+        "id": "ceeff07aa703",
+        "source_file": "en/docs/deployment/fastapicloud.md",
+        "chunk_index": 1,
+        "score": 0.7170441915366548
+      },
+      {
+        "id": "b7b84fc69193",
+        "source_file": "en/docs/help-fastapi.md",
+        "chunk_index": 9,
+        "score": 0.7164948920613656
+      },
+      {
+        "id": "441351f92345",
+        "source_file": "en/docs/advanced/behind-a-proxy.md",
+        "chunk_index": 0,
+        "score": 0.6969939054850408
+      },
+      {
+        "id": "c1df8a76cbe1",
+        "source_file": "en/docs/index.md",
+        "chunk_index": 21,
+        "score": 0.6948368913129698
+      },
+      {
+        "id": "4ec5824f4d5c",
+        "source_file": "en/docs/tutorial/first-steps.md",
+        "chunk_index": 22,
+        "score": 0.6948368913129698
+      }
+    ],
+    "bn03": [
+      {
+        "id": "b23f14716d82",
+        "source_file": "en/docs/tutorial/security/simple-oauth2.md",
+        "chunk_index": 3,
+        "score": 0.7201125669580016
+      },
+      {
+        "id": "659fef87e013",
+        "source_file": "en/docs/features.md",
+        "chunk_index": 0,
+        "score": 0.7006310850946088
+      },
+      {
+        "id": "c7b800dc40a5",
+        "source_file": "en/docs/management.md",
+        "chunk_index": 2,
+        "score": 0.6777564287185717
+      },
+      {
+        "id": "176ca4a8eac7",
+        "source_file": "en/docs/about/index.md",
+        "chunk_index": 0,
+        "score": 0.6755954027175951
+      },
+      {
+        "id": "cd13131209d2",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 399,
+        "score": 0.6709887189262354
+      }
+    ],
+    "bd09": [
+      {
+        "id": "f51b9105ce7f",
+        "source_file": "en/docs/tutorial/handling-errors.md",
+        "chunk_index": 8,
+        "score": 0.8873958587646484
+      },
+      {
+        "id": "562abed4d061",
+        "source_file": "en/docs/tutorial/handling-errors.md",
+        "chunk_index": 7,
+        "score": 0.8447422981262207
+      },
+      {
+        "id": "bcc761f6abc1",
+        "source_file": "en/docs/tutorial/handling-errors.md",
+        "chunk_index": 9,
+        "score": 0.8425938738165464
+      },
+      {
+        "id": "a334f102a64d",
+        "source_file": "en/docs/advanced/using-request-directly.md",
+        "chunk_index": 0,
+        "score": 0.8099042290506241
+      },
+      {
+        "id": "72d803d830f0",
+        "source_file": "en/docs/tutorial/dependencies/dependencies-with-yield.md",
+        "chunk_index": 5,
+        "score": 0.8085817935640158
+      }
+    ],
+    "bd10": [
+      {
+        "id": "e8e228c8ac67",
+        "source_file": "en/docs/tutorial/path-operation-configuration.md",
+        "chunk_index": 1,
+        "score": 0.8119603135656764
+      },
+      {
+        "id": "be1f24bfc24a",
+        "source_file": "en/docs/advanced/additional-status-codes.md",
+        "chunk_index": 1,
+        "score": 0.7865033404227145
+      },
+      {
+        "id": "7d7859d38c87",
+        "source_file": "en/docs/tutorial/response-status-code.md",
+        "chunk_index": 0,
+        "score": 0.7677575855471948
+      },
+      {
+        "id": "d0641caa4c0c",
+        "source_file": "en/docs/advanced/response-change-status-code.md",
+        "chunk_index": 2,
+        "score": 0.7587769010598895
+      },
+      {
+        "id": "76435ddea558",
+        "source_file": "en/docs/advanced/path-operation-advanced-configuration.md",
+        "chunk_index": 4,
+        "score": 0.7538870270386956
+      }
+    ],
+    "bd11": [
+      {
+        "id": "efa00189595a",
+        "source_file": "en/docs/tutorial/response-model.md",
+        "chunk_index": 19,
+        "score": 0.8313586115837097
+      },
+      {
+        "id": "101cc203422f",
+        "source_file": "en/docs/tutorial/response-model.md",
+        "chunk_index": 21,
+        "score": 0.8304978609085083
+      },
+      {
+        "id": "c3fa7008ccda",
+        "source_file": "en/docs/tutorial/response-model.md",
+        "chunk_index": 16,
+        "score": 0.7994776964187622
+      },
+      {
+        "id": "cc4d459b4bd1",
+        "source_file": "en/docs/tutorial/response-model.md",
+        "chunk_index": 15,
+        "score": 0.7849870452292549
+      },
+      {
+        "id": "f3c58e1b89e9",
+        "source_file": "en/docs/advanced/custom-response.md",
+        "chunk_index": 2,
+        "score": 0.7768203153121297
+      }
+    ],
+    "bd12": [
+      {
+        "id": "df7819ff9d9a",
+        "source_file": "en/docs/tutorial/cors.md",
+        "chunk_index": 4,
+        "score": 0.8669864177132114
+      },
+      {
+        "id": "a1f6b36c407e",
+        "source_file": "en/docs/tutorial/cors.md",
+        "chunk_index": 7,
+        "score": 0.8181653727194459
+      },
+      {
+        "id": "6f682b0f0f06",
+        "source_file": "en/docs/advanced/websockets.md",
+        "chunk_index": 0,
+        "score": 0.7762799859046992
+      },
+      {
+        "id": "7e0214e8308d",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 698,
+        "score": 0.7743245632261558
+      },
+      {
+        "id": "82c2bc491e0d",
+        "source_file": "en/docs/advanced/behind-a-proxy.md",
+        "chunk_index": 2,
+        "score": 0.7735110330263927
+      }
+    ],
+    "bd13": [
+      {
+        "id": "d91cc8a1eb4f",
+        "source_file": "en/docs/tutorial/request-files.md",
+        "chunk_index": 1,
+        "score": 0.8007104992866573
+      },
+      {
+        "id": "1ddf8afbb01e",
+        "source_file": "en/docs/advanced/using-request-directly.md",
+        "chunk_index": 1,
+        "score": 0.7883019917191276
+      },
+      {
+        "id": "a334f102a64d",
+        "source_file": "en/docs/advanced/using-request-directly.md",
+        "chunk_index": 0,
+        "score": 0.7820107936859186
+      },
+      {
+        "id": "55f62df56dd7",
+        "source_file": "en/docs/tutorial/request-forms-and-files.md",
+        "chunk_index": 2,
+        "score": 0.7799762952313612
+      },
+      {
+        "id": "5612501bccc7",
+        "source_file": "en/docs/advanced/additional-status-codes.md",
+        "chunk_index": 0,
+        "score": 0.7767108678817805
+      }
+    ],
+    "bd14": [
+      {
+        "id": "2e46c282c7ca",
+        "source_file": "en/docs/tutorial/bigger-applications.md",
+        "chunk_index": 3,
+        "score": 0.8076409812187578
+      },
+      {
+        "id": "7b7dd7a25337",
+        "source_file": "en/docs/tutorial/bigger-applications.md",
+        "chunk_index": 11,
+        "score": 0.8054447406000266
+      },
+      {
+        "id": "d1ef331100fd",
+        "source_file": "en/docs/advanced/sub-applications.md",
+        "chunk_index": 3,
+        "score": 0.7830829878946612
+      },
+      {
+        "id": "94d385b73e5e",
+        "source_file": "en/docs/tutorial/bigger-applications.md",
+        "chunk_index": 17,
+        "score": 0.7809911006984446
+      },
+      {
+        "id": "f1d1c67b78df",
+        "source_file": "en/docs/tutorial/bigger-applications.md",
+        "chunk_index": 15,
+        "score": 0.7786082261385988
+      }
+    ],
+    "bd15": [
+      {
+        "id": "a41f1ee559a9",
+        "source_file": "en/docs/advanced/response-directly.md",
+        "chunk_index": 3,
+        "score": 0.8989338935057004
+      },
+      {
+        "id": "c81419d64fbe",
+        "source_file": "en/docs/advanced/custom-response.md",
+        "chunk_index": 0,
+        "score": 0.8693471628816642
+      },
+      {
+        "id": "e46191c17eb8",
+        "source_file": "en/docs/reference/responses.md",
+        "chunk_index": 0,
+        "score": 0.8683992365479731
+      },
+      {
+        "id": "6b31db5cb287",
+        "source_file": "en/docs/advanced/response-directly.md",
+        "chunk_index": 1,
+        "score": 0.8522998270631043
+      },
+      {
+        "id": "6d9cce788119",
+        "source_file": "en/docs/advanced/custom-response.md",
+        "chunk_index": 15,
+        "score": 0.8498109579086364
+      }
+    ],
+    "bd16": [
+      {
+        "id": "d05bf477d642",
+        "source_file": "en/docs/tutorial/body-multiple-params.md",
+        "chunk_index": 6,
+        "score": 0.811885332707011
+      },
+      {
+        "id": "fb93d160079a",
+        "source_file": "en/docs/tutorial/body.md",
+        "chunk_index": 8,
+        "score": 0.8098898643320894
+      },
+      {
+        "id": "ab071963b78a",
+        "source_file": "en/docs/tutorial/body-multiple-params.md",
+        "chunk_index": 1,
+        "score": 0.7981556178238634
+      },
+      {
+        "id": "43ad7ef8643a",
+        "source_file": "en/docs/tutorial/body-multiple-params.md",
+        "chunk_index": 0,
+        "score": 0.790011311768137
+      },
+      {
+        "id": "da93e0d9021f",
+        "source_file": "en/docs/tutorial/body-multiple-params.md",
+        "chunk_index": 2,
+        "score": 0.78520994098247
+      }
+    ],
+    "bd17": [
+      {
+        "id": "9e1df5f5736b",
+        "source_file": "en/docs/reference/response.md",
+        "chunk_index": 0,
+        "score": 0.7902228236198425
+      },
+      {
+        "id": "1ddf8afbb01e",
+        "source_file": "en/docs/advanced/using-request-directly.md",
+        "chunk_index": 1,
+        "score": 0.7854843735694885
+      },
+      {
+        "id": "13b8e2b7d6bd",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 602,
+        "score": 0.7833810448646545
+      },
+      {
+        "id": "fee2bf47282c",
+        "source_file": "en/docs/tutorial/server-sent-events.md",
+        "chunk_index": 0,
+        "score": 0.7821722756521552
+      },
+      {
+        "id": "f6fb0635338a",
+        "source_file": "en/docs/advanced/behind-a-proxy.md",
+        "chunk_index": 4,
+        "score": 0.7811240553855896
+      }
+    ],
+    "bd18": [
+      {
+        "id": "da310c9c8ecf",
+        "source_file": "en/docs/tutorial/bigger-applications.md",
+        "chunk_index": 20,
+        "score": 0.7974815730783524
+      },
+      {
+        "id": "c08b26afdab2",
+        "source_file": "en/docs/tutorial/bigger-applications.md",
+        "chunk_index": 6,
+        "score": 0.7828106672506345
+      },
+      {
+        "id": "8ed5a46fdbd8",
+        "source_file": "en/docs/tutorial/bigger-applications.md",
+        "chunk_index": 2,
+        "score": 0.7734494018347154
+      },
+      {
+        "id": "2313908d4393",
+        "source_file": "en/docs/tutorial/frontend.md",
+        "chunk_index": 7,
+        "score": 0.7604102777945718
+      },
+      {
+        "id": "7493c9a48d65",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 44,
+        "score": 0.7536353166538153
+      }
+    ],
+    "bd19": [
+      {
+        "id": "b3ad93605ac5",
+        "source_file": "en/docs/tutorial/middleware.md",
+        "chunk_index": 0,
+        "score": 0.8366071375353008
+      },
+      {
+        "id": "5f431e06708f",
+        "source_file": "en/docs/advanced/middleware.md",
+        "chunk_index": 1,
+        "score": 0.7897690189160143
+      },
+      {
+        "id": "7b7dd7a25337",
+        "source_file": "en/docs/tutorial/bigger-applications.md",
+        "chunk_index": 11,
+        "score": 0.7877397447252882
+      },
+      {
+        "id": "205cead59fe8",
+        "source_file": "en/docs/how-to/custom-request-and-route.md",
+        "chunk_index": 0,
+        "score": 0.7829820280378623
+      },
+      {
+        "id": "2c268ad10a1e",
+        "source_file": "en/docs/deployment/concepts.md",
+        "chunk_index": 8,
+        "score": 0.7738979401831769
+      }
+    ],
+    "bd20": [
+      {
+        "id": "f264a456995d",
+        "source_file": "en/docs/tutorial/request-forms.md",
+        "chunk_index": 3,
+        "score": 0.8405992984771729
+      },
+      {
+        "id": "4261f7befde2",
+        "source_file": "en/docs/tutorial/request-files.md",
+        "chunk_index": 5,
+        "score": 0.8314595222473145
+      },
+      {
+        "id": "55f62df56dd7",
+        "source_file": "en/docs/tutorial/request-forms-and-files.md",
+        "chunk_index": 2,
+        "score": 0.8011896014213562
+      },
+      {
+        "id": "e34e9b7d50a2",
+        "source_file": "en/docs/tutorial/request-forms.md",
+        "chunk_index": 1,
+        "score": 0.794890547407806
+      },
+      {
+        "id": "85330e80be8c",
+        "source_file": "en/docs/tutorial/request-form-models.md",
+        "chunk_index": 1,
+        "score": 0.7917469019738987
+      }
+    ],
+    "bn04": [
+      {
+        "id": "b3ad93605ac5",
+        "source_file": "en/docs/tutorial/middleware.md",
+        "chunk_index": 0,
+        "score": 0.7766006259202266
+      },
+      {
+        "id": "659fef87e013",
+        "source_file": "en/docs/features.md",
+        "chunk_index": 0,
+        "score": 0.7667218675232493
+      },
+      {
+        "id": "fc87b224dec6",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 668,
+        "score": 0.7647612690925598
+      },
+      {
+        "id": "5f431e06708f",
+        "source_file": "en/docs/advanced/middleware.md",
+        "chunk_index": 1,
+        "score": 0.763701319694519
+      },
+      {
+        "id": "854d8f610090",
+        "source_file": "en/docs/advanced/dataclasses.md",
+        "chunk_index": 4,
+        "score": 0.7537168860435486
+      }
+    ],
+    "bn05": [
+      {
+        "id": "f86f5b9ab039",
+        "source_file": "en/docs/tutorial/index.md",
+        "chunk_index": 2,
+        "score": 0.7285287269600534
+      },
+      {
+        "id": "fcf4a08518ca",
+        "source_file": "en/docs/deployment/docker.md",
+        "chunk_index": 6,
+        "score": 0.7189059592597584
+      },
+      {
+        "id": "dfbe83b92a82",
+        "source_file": "en/docs/tutorial/body.md",
+        "chunk_index": 1,
+        "score": 0.7161075642044918
+      },
+      {
+        "id": "33ad4dd9ca24",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 669,
+        "score": 0.7026084242696622
+      },
+      {
+        "id": "95377a21740a",
+        "source_file": "en/docs/release-notes.md",
+        "chunk_index": 694,
+        "score": 0.7016132829650353
+      }
+    ],
+    "bn06": [
+      {
+        "id": "40670d40ed57",
+        "source_file": "en/docs/tutorial/query-params-str-validations.md",
+        "chunk_index": 4,
+        "score": 0.7680949339838377
+      },
+      {
+        "id": "1ddf8afbb01e",
+        "source_file": "en/docs/advanced/using-request-directly.md",
+        "chunk_index": 1,
+        "score": 0.7613741897717615
+      },
+      {
+        "id": "f862ae93df73",
+        "source_file": "en/docs/advanced/strict-content-type.md",
+        "chunk_index": 0,
+        "score": 0.7580019524095115
+      },
+      {
+        "id": "854d8f610090",
+        "source_file": "en/docs/advanced/dataclasses.md",
+        "chunk_index": 4,
+        "score": 0.7535062579210856
+      },
+      {
+        "id": "d05bf477d642",
+        "source_file": "en/docs/tutorial/body-multiple-params.md",
+        "chunk_index": 6,
+        "score": 0.7498891726169267
+      }
+    ]
+  }
+}

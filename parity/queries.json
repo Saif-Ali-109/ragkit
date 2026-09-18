@@ -1,0 +1,156 @@
+{
+  "source": "DocPilot src/docpilot/eval/dataset/benchmark.json (Phase 4, 30 rows)",
+  "purpose": "S1-T7 retrieval parity \u2014 same-process top-k pre/post extraction",
+  "queries": [
+    {
+      "id": "bd01",
+      "question": "How do I declare a query parameter with a default value in FastAPI?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd02",
+      "question": "How do I declare the type of a path parameter in FastAPI?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd03",
+      "question": "What is the response_model parameter used for in FastAPI?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd04",
+      "question": "When do FastAPI background tasks run relative to the response?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd05",
+      "question": "How do I send a request body with my FastAPI endpoint?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd06",
+      "question": "Does declaring a default value on a query parameter make it optional or required?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd07",
+      "question": "Why must the /users/me path operation be declared before the /users/{user_id} one?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd08",
+      "question": "How do I declare cookie parameters in FastAPI?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bl01",
+      "question": "Is there an open issue about OAuth2 token expiration in the fastapi/fastapi repository?",
+      "category": "live-state-answerable"
+    },
+    {
+      "id": "bl02",
+      "question": "What is the most recent commit on the fastapi/fastapi repository?",
+      "category": "live-state-answerable"
+    },
+    {
+      "id": "bl03",
+      "question": "How many issues are currently open in the fastapi/fastapi repository?",
+      "category": "live-state-answerable"
+    },
+    {
+      "id": "bl04",
+      "question": "Which commits were made on the default branch of fastapi/fastapi recently?",
+      "category": "live-state-answerable"
+    },
+    {
+      "id": "bn01",
+      "question": "Is FastAPI the best framework for our team's specific project?",
+      "category": "neither"
+    },
+    {
+      "id": "bn02",
+      "question": "How much does it cost per month to host a FastAPI app on AWS?",
+      "category": "neither"
+    },
+    {
+      "id": "bn03",
+      "question": "What are the hiring plans of the FastAPI maintainers for the next quarter?",
+      "category": "neither"
+    },
+    {
+      "id": "bd09",
+      "question": "What exception does FastAPI raise when a request body fails validation, and how do I override its default error response?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd10",
+      "question": "How do I set a custom HTTP status code on a path operation, for example 201 Created?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd11",
+      "question": "What does the response_model parameter do, and how do I omit unset fields from the response?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd12",
+      "question": "How do I enable CORS so a browser frontend on another origin can call my FastAPI API?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd13",
+      "question": "What classes does FastAPI provide for accepting file uploads in an endpoint, and where does the uploaded data end up?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd14",
+      "question": "How do I split my FastAPI app into multiple modules with their own routers and register them?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd15",
+      "question": "How do I return a custom JSON response of my own instead of letting FastAPI build the response model?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd16",
+      "question": "Can a single endpoint declare both a path parameter and a request body at the same time, and which chapters of the tutorial document each?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd17",
+      "question": "How do I read custom HTTP headers that a client sends to my FastAPI endpoint?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd18",
+      "question": "How do I share code between multiple path operations, like checking the same token on every route?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd19",
+      "question": "How do I add custom middleware that runs for every request in my FastAPI application?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bd20",
+      "question": "How do I receive HTML form fields instead of JSON in a FastAPI endpoint?",
+      "category": "docs-answerable"
+    },
+    {
+      "id": "bn04",
+      "question": "Which rate limiting middleware does the FastAPI documentation recommend?",
+      "category": "neither"
+    },
+    {
+      "id": "bn05",
+      "question": "How do I install the DocPilot package from PyPI?",
+      "category": "neither"
+    },
+    {
+      "id": "bn06",
+      "question": "What is the default maximum request body size in bytes that FastAPI accepts?",
+      "category": "neither"
+    }
+  ]
+}

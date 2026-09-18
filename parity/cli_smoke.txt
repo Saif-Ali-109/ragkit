@@ -1,0 +1,23 @@
+$ python -m docpilot ask "How do I declare a query parameter with a default value in FastAPI?"
+(exit 0)
+
+In FastAPI you declare a query parameter by giving the function argument a default value.
+If you want to add validation or metadata you can wrap the default with `Query(...)`; otherwise a plain default value is enough.
+
+```python
+# Using Query() for extra validation
+q: str | None = Query(default=None, max_length=50)
+
+# Or simply a plain default (makes the parameter optional)
+q: str | None = None
+```
+
+Both forms tell FastAPI that `q` is a query parameter, that it is optional (because the default is `None`), and, in the first example, that the string must not exceed 50 characters.
+FastAPI automatically recognises the parameter as a query parameter when it is not declared as a path or body parameter.
+
+[1] [2] [3]
+
+Sources:
+[1] en/docs/tutorial/query-params-str-validations.md → /Query Parameters and String Validations/Alternative (old): `Query` as the default value
+[2] en/docs/tutorial/query-params.md → /Query Parameters/Optional parameters
+[3] en/docs/tutorial/query-params-str-validations.md → /Query Parameters and String Validations
