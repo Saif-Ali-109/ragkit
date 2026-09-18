@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "docpilot_sha": "391ebc8",
+    "hermetic": true,
+    "ragkit_sha": "3ded3fb",
+    "scenario_count": 6,
+    "side": "pre",
+    "timestamp": "2026-09-18T17:39:22.976994+00:00"
+  },
+  "scenarios": [
+    {
+      "answer": "Run `pip install fastapi` [1].\n\nSources:\n[1] en/docs/tutorial/params.md \u2192 Parameters",
+      "direct": true,
+      "id": "direct_auto",
+      "judge_calls": 0,
+      "judge_tools_seen": [],
+      "max_retries": 2,
+      "refused": false,
+      "retriever_calls": [
+        [
+          "How do I install FastAPI?",
+          5,
+          "en"
+        ]
+      ],
+      "sources": [
+        {
+          "file": "en/docs/tutorial/params.md",
+          "heading": "Parameters",
+          "kind": "tutorial",
+          "ref": 1
+        }
+      ],
+      "tool_calls": [],
+      "trace": [
+        {
+          "decision": "direct",
+          "detail": "simple question \u2014 no heuristics triggered",
+          "query": "How do I install FastAPI?",
+          "step": "gate"
+        }
+      ]
+    },
+    {
+      "answer": "Path, query and body parameters each validate separately [1].\n\nSources:\n[1] en/docs/tutorial/params.md \u2192 Parameters",
+      "direct": true,
+      "id": "direct_forced",
+      "judge_calls": 0,
+      "judge_tools_seen": [],
+      "max_retries": 2,
+      "refused": false,
+      "retriever_calls": [
+        [
+          "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          5,
+          "en"
+        ]
+      ],
+      "sources": [
+        {
+          "file": "en/docs/tutorial/params.md",
+          "heading": "Parameters",
+          "kind": "tutorial",
+          "ref": 1
+        },
+        {
+          "file": "en/docs/tutorial/params.md",
+          "heading": "Parameters",
+          "kind": "tutorial",
+          "ref": 2
+        }
+      ],
+      "tool_calls": [],
+      "trace": [
+        {
+          "decision": "forced-direct",
+          "detail": "signals=['connectors:and,combine', 'multi_concept:body,endpoint,parameters,path,query']; signals fired: connectors:and,combine, multi_concept:body,endpoint,parameters,path,query",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "gate"
+        }
+      ]
+    },
+    {
+      "answer": "Each parameter kind has its own validation rules [1].\n\nSources:\n[1] en/docs/tutorial/params.md \u2192 Parameters",
+      "direct": false,
+      "id": "agentic_sufficient",
+      "judge_calls": 1,
+      "judge_tools_seen": [
+        false
+      ],
+      "max_retries": 2,
+      "refused": false,
+      "retriever_calls": [
+        [
+          "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          5,
+          "en"
+        ]
+      ],
+      "sources": [
+        {
+          "file": "en/docs/tutorial/params.md",
+          "heading": "Parameters",
+          "kind": "tutorial",
+          "ref": 1
+        },
+        {
+          "file": "en/docs/tutorial/params.md",
+          "heading": "Parameters",
+          "kind": "tutorial",
+          "ref": 2
+        }
+      ],
+      "tool_calls": [],
+      "trace": [
+        {
+          "decision": "agentic",
+          "detail": "signals=['connectors:and,combine', 'multi_concept:body,endpoint,parameters,path,query']; signals fired: connectors:and,combine, multi_concept:body,endpoint,parameters,path,query",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "gate"
+        },
+        {
+          "decision": "retrieved",
+          "detail": "turn=1: retrieved 2 chunks; top scores: [0.91, 0.72]",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "search"
+        },
+        {
+          "decision": "sufficient",
+          "detail": "verdict=sufficient; reason=evidence present",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "judge"
+        },
+        {
+          "decision": "answer",
+          "detail": "answer",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "answer"
+        }
+      ]
+    },
+    {
+      "answer": "Install via pip [1].\n\nSources:\n[1] en/docs/tutorial/params.md \u2192 Parameters",
+      "direct": false,
+      "id": "agentic_forced_simple",
+      "judge_calls": 1,
+      "judge_tools_seen": [
+        false
+      ],
+      "max_retries": 2,
+      "refused": false,
+      "retriever_calls": [
+        [
+          "How do I install FastAPI?",
+          5,
+          "en"
+        ]
+      ],
+      "sources": [
+        {
+          "file": "en/docs/tutorial/params.md",
+          "heading": "Parameters",
+          "kind": "tutorial",
+          "ref": 1
+        }
+      ],
+      "tool_calls": [],
+      "trace": [
+        {
+          "decision": "forced-agentic",
+          "detail": "simple question \u2014 no heuristics triggered",
+          "query": "How do I install FastAPI?",
+          "step": "gate"
+        },
+        {
+          "decision": "retrieved",
+          "detail": "turn=1: retrieved 1 chunks; top scores: [0.9]",
+          "query": "How do I install FastAPI?",
+          "step": "search"
+        },
+        {
+          "decision": "sufficient",
+          "detail": "verdict=sufficient; reason=simple answered",
+          "query": "How do I install FastAPI?",
+          "step": "judge"
+        },
+        {
+          "decision": "answer",
+          "detail": "answer",
+          "query": "How do I install FastAPI?",
+          "step": "answer"
+        }
+      ]
+    },
+    {
+      "answer": "Validation differs per parameter kind [1].\n\nSources:\n[1] en/docs/tutorial/params.md \u2192 Parameters",
+      "direct": false,
+      "id": "agentic_retry",
+      "judge_calls": 2,
+      "judge_tools_seen": [
+        false,
+        false
+      ],
+      "max_retries": 2,
+      "refused": false,
+      "retriever_calls": [
+        [
+          "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          5,
+          "en"
+        ],
+        [
+          "reformulated validation rules",
+          5,
+          "en"
+        ]
+      ],
+      "sources": [
+        {
+          "file": "en/docs/tutorial/params.md",
+          "heading": "Parameters",
+          "kind": "tutorial",
+          "ref": 1
+        }
+      ],
+      "tool_calls": [],
+      "trace": [
+        {
+          "decision": "forced-agentic",
+          "detail": "signals=['connectors:and,combine', 'multi_concept:body,endpoint,parameters,path,query']; signals fired: connectors:and,combine, multi_concept:body,endpoint,parameters,path,query",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "gate"
+        },
+        {
+          "decision": "retrieved",
+          "detail": "turn=1: retrieved 1 chunks; top scores: [0.61]",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "search"
+        },
+        {
+          "decision": "insufficient/retry-1",
+          "detail": "verdict=insufficient; reason=thin evidence; reformulated_query=reformulated validation rules",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "judge"
+        },
+        {
+          "decision": "retrieved",
+          "detail": "turn=2: retrieved 1 chunks; top scores: [0.88]",
+          "query": "reformulated validation rules",
+          "step": "search"
+        },
+        {
+          "decision": "sufficient",
+          "detail": "verdict=sufficient; reason=better evidence",
+          "query": "reformulated validation rules",
+          "step": "judge"
+        },
+        {
+          "decision": "answer",
+          "detail": "answer",
+          "query": "reformulated validation rules",
+          "step": "answer"
+        }
+      ]
+    },
+    {
+      "answer": "OAuth tokens expire \u2014 see the live issue [1].\n\nSources:\n[1] en/docs/tutorial/params.md \u2192 Parameters",
+      "direct": false,
+      "id": "agentic_tool",
+      "judge_calls": 1,
+      "judge_tools_seen": [
+        true
+      ],
+      "max_retries": 2,
+      "refused": false,
+      "retriever_calls": [
+        [
+          "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          5,
+          "en"
+        ]
+      ],
+      "sources": [
+        {
+          "file": "en/docs/tutorial/params.md",
+          "heading": "Parameters",
+          "kind": "tutorial",
+          "ref": 1
+        },
+        {
+          "file": "github:acme/widget#42",
+          "heading": "OAuth token expires",
+          "kind": "live",
+          "ref": 2
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "github.search_issues",
+          "params": {
+            "query": "oauth token expiration"
+          }
+        }
+      ],
+      "trace": [
+        {
+          "decision": "forced-agentic",
+          "detail": "signals=['connectors:and,combine', 'multi_concept:body,endpoint,parameters,path,query']; signals fired: connectors:and,combine, multi_concept:body,endpoint,parameters,path,query",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "gate"
+        },
+        {
+          "decision": "retrieved",
+          "detail": "turn=1: retrieved 1 chunks; top scores: [0.61]",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "search"
+        },
+        {
+          "decision": "insufficient/needs-tool",
+          "detail": "verdict=insufficient; reason=needs live issue state; tool_request={'name': 'github.search_issues', 'params': {'query': 'oauth token expiration'}}",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "judge"
+        },
+        {
+          "decision": "tool_call",
+          "detail": "github.search_issues -> ok: 1 item(s)",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "tool_call"
+        },
+        {
+          "decision": "answer",
+          "detail": "answer",
+          "query": "Combine path, query, and body parameters in one endpoint \u2014 what are the validation rules for each kind?",
+          "step": "answer"
+        }
+      ]
+    }
+  ]
+}
