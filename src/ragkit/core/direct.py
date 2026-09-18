@@ -49,8 +49,8 @@ from ragkit.core.models import (
 from ragkit.generation.prompts import SYSTEM_PROMPT, format_sources
 
 # Placeholder context shown to the LLM when retrieval returned nothing.
-# Canonical home — re-exported from docpilot.pipeline_ask so the agent graph's
-# import location stays unchanged.
+# Canonical home — re-exported from docpilot.pipeline_ask (app shim); since
+# S2-T2 the agent graph imports it directly from here (ragkit.core.direct).
 _NO_CONTEXT_NOTE = "[no context retrieved — the documentation may not cover this question.]"
 
 
