@@ -1,7 +1,7 @@
 [project]
 name = "ragkit"
-version = "0.1.0"
-description = "Reusable RAG framework extracted from DocPilot — Stage 1: core chain"
+version = "0.2.0"
+description = "Reusable RAG framework extracted from DocPilot — Stage 2: core chain + agentic layer"
 readme = "README.md"
 authors = [
     { name = "Saif-Ali-109", email = "01-134242-109@student.bahria.edu.pk" }
