@@ -6,11 +6,12 @@ authority: derived — SPEC.md wins on conflict
 ## 1. status
 
 - origin: extracted from DocPilot (Phases 1–6 COMPLETE, 2026-09-12)
-- current: Stage 1 — core chain, ACTIVE (started 2026-09-17)
+- current: **Stage 1 — core chain COMPLETE (2026-09-18): `v0.1.0` tagged and
+  pushed; paused for review before Stage 2 (agentic)**
 - source-of-truth extraction plan: DocPilot PLAN §8
   (<https://github.com/Saif-Ali-109/DocPilot/blob/main/PLAN.md>)
 
-## 2. Stage 1 — core chain (ACTIVE)
+## 2. Stage 1 — core chain (COMPLETE 2026-09-18, v0.1.0)
 
 ### 2.1 scope (move set, from DocPilot `src/docpilot/`)
 
@@ -74,18 +75,25 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       language=en, levers off. 30 benchmark queries →
       **30/30 top-k IDENTICAL** (harness + evidence in `parity/`). CLI/API
       smoke: `python -m docpilot ask ...` exit 0 with a cited answer
-- [ ] S1-T8 exit sweep: READMEs honest, tag `v0.1.0`, DocPilot pin ↔ tag
-      recorded
+- [x] S1-T8 exit sweep: READMEs honest, tag `v0.1.0`, DocPilot pin ↔ tag
+      recorded — DONE 2026-09-18: READMEs updated (both repos); clean-venv
+      install from git `@v0.1.0` verified (`import ragkit` + `ragkit.config`
+      safe defaults in a deps-free venv); `git tag -a v0.1.0` pushed; DocPilot
+      pyproject pin → `@v0.1.0`; §8.5 all `[x]`; no secrets; both repos
+      pushed. **Stage 1 COMPLETE — paused for review.**
 
 ### 2.3 exit criteria (checked at stage close)
 
-- [ ] installable from git; `import ragkit` works in a clean venv
+- [x] installable from git; `import ragkit` works in a clean venv — DONE
+      (S1-T8: deps-free clean venv from `@v0.1.0`; `import ragkit`,
+      `from ragkit import config` succeed)
 - [x] DocPilot has zero copies of the moved modules (grep-verified, no shims)
 - [x] ragkit standalone test suite green (S1-T5: 181 passed, 10 hermetic skips)
 - [x] combined DocPilot + ragkit suite green (≥ 552; unit tests live in
       ragkit only) — S1-T6: ragkit 191 + DocPilot 361 = 552
 - [x] retrieval parity evidence committed (`parity/`, 30/30 top-k identical)
-- [ ] version pairing recorded; both repos pushed; no secrets
+- [x] version pairing recorded (DocPilot pin `@v0.1.0` ↔ ragkit tag
+      `v0.1.0`); both repos pushed; no secrets
 
 ## 3. Stage 2 — agentic (planned)
 

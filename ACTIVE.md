@@ -6,7 +6,8 @@ load: read whole
 
 ## 1. Status
 
-- current_stage: Stage 1 — core chain, ACTIVE (entered 2026-09-17)
+- current_stage: Stage 1 — core chain, **COMPLETE** (2026-09-18, `v0.1.0`
+  tagged + pushed); paused for review before Stage 2 (agentic)
 - last_updated: 2026-09-18
 - test baseline: combined 552 (pre-extraction); current split ragkit 191
   (181 passed, 10 skipped) + DocPilot 361
@@ -57,8 +58,11 @@ load: read whole
   top_k=5, language=en, levers off): 30 benchmark queries → **30/30 top-k
   IDENTICAL**; CLI/API smoke exit 0 with cited answer. Harness + evidence in
   `parity/`.
-- Next: S1-T8 — exit sweep (`v0.1.0` tag, DocPilot pin ↔ tag, clean-venv
-  install check, README honesty) → pause for review.
+- 2026-09-18 S1-T8: exit sweep — READMEs honest (both repos), clean-venv
+  install from git `@v0.1.0` verified (deps-free venv: `import ragkit` +
+  `ragkit.config` safe defaults), `v0.1.0` annotated tag pushed on ragkit,
+  DocPilot pyproject pin → `@v0.1.0`, §8.5 all `[x]`, no secrets, both repos
+  pushed. **Stage 1 COMPLETE — paused for review before Stage 2 (agentic).**
 
 ## 3. Load index
 
