@@ -6,8 +6,8 @@ load: read whole
 
 ## 1. Status
 
-- current_stage: Stage 1 — core chain, **COMPLETE** (2026-09-18, `v0.1.0`
-  tagged + pushed); paused for review before Stage 2 (agentic)
+- current_stage: Stage 2 — agentic, **ACTIVE** (started 2026-09-18 after the
+  Stage-1 close review — independent audit, merge-ready, no blockers)
 - last_updated: 2026-09-18
 - test baseline: combined 552 (pre-extraction); current split ragkit 191
   (190 passed, 1 skipped with a dev `.env`; 181 passed, 10 skipped hermetic)
@@ -73,6 +73,12 @@ load: read whole
   repo-root `.env` (gitignored) so the 9 live-PG integration tests run on
   dev machines with credentials — suite 190 passed, 1 skipped there;
   hermetic baseline (no `.env`) 181 passed, 10 skipped; totals identical.
+- 2026-09-18 S2-T1: docs — Stage 2 (agentic) task list written into ragkit
+  PLAN §3 and DocPilot PLAN §8.7 (S2-T1..T5 + exit criteria); ACTIVE
+  refreshed in both repos. Bundle: `agent/*` (except `code_route.py` →
+  Stage 4) + `tools/*` + langgraph dep move; ragkit.config gains 10 keys
+  (AGENT_*, GITHUB_*, RETRIEVAL_LANGUAGE); parity gate = hermetic harness +
+  one live smoke (locked). Next: S2-T2 — mechanical move.
 
 ## 3. Load index
 

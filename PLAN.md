@@ -6,8 +6,8 @@ authority: derived — SPEC.md wins on conflict
 ## 1. status
 
 - origin: extracted from DocPilot (Phases 1–6 COMPLETE, 2026-09-12)
-- current: **Stage 1 — core chain COMPLETE (2026-09-18): `v0.1.0` tagged and
-  pushed; paused for review before Stage 2 (agentic)**
+- current: **Stage 2 — agentic, ACTIVE (started 2026-09-18 — Stage-1 close
+  reviewed and merge-ready: independent audit, no blockers)**
 - source-of-truth extraction plan: DocPilot PLAN §8
   (<https://github.com/Saif-Ali-109/DocPilot/blob/main/PLAN.md>)
 
@@ -95,10 +95,48 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
 - [x] version pairing recorded (DocPilot pin `@v0.1.0` ↔ ragkit tag
       `v0.1.0`); both repos pushed; no secrets
 
-## 3. Stage 2 — agentic (planned)
+## 3. Stage 2 — agentic (ACTIVE 2026-09-18)
 
-- `agent/*`, `tools/*` (GitHub Tool), langgraph dep → ragkit
-- gate: DocPilot full suite green + agentic parity sample
+### 3.1 scope (move set, from DocPilot `src/docpilot/`)
+- `agent/__init__.py`, `agent/gate.py`, `agent/graph.py`, `agent/interface.py`,
+  `agent/judge.py`, `agent/pipeline_agentic.py`, `agent/prompts.py`,
+  `agent/questions.py`, `agent/types.py` → `ragkit.agent`
+- `tools/__init__.py`, `tools/base.py`, `tools/github.py` → `ragkit.tools`
+- NOT moving: `agent/code_route.py`, `codegen/*`, `validation/*` (Stage 4)
+- config: `ragkit.config` now owns the `AGENT_*`, `GITHUB_*` and
+  `RETRIEVAL_LANGUAGE` keys (env-read, safe defaults identical to DocPilot's
+  today; `GITHUB_PAT` optional, default "")
+- deps: `langgraph>=1.2.11` moves to ragkit (lazy — only `graph.py` imports
+  it, so `ragkit.agent` stays importable without langgraph installed)
+- gate: DocPilot full suite green + agentic parity sample (hermetic harness
+  + one live smoke — locked 2026-09-18)
+
+### 3.2 tasks (execution order)
+- [x] S2-T1: docs — scope + task list + ACTIVE refresh, committed in both
+      repos — DONE 2026-09-18 (ragkit PLAN §3 / DocPilot PLAN §8.7)
+- [ ] S2-T2: move mechanically (prefix swap) into `ragkit.agent` /
+      `ragkit.tools`; extend `ragkit.config` with the 10 keys; graph.py
+      `_NO_CONTEXT_NOTE` from `ragkit.core.direct`; langgraph dep; 6
+      hermetic agent/tool test files move
+- [ ] S2-T3: DocPilot dogfood — rewire cli/api/eval/code_route + staying
+      tests to `ragkit.agent.*` / `ragkit.tools.*`; delete moved modules +
+      tests; DocPilot config re-exports the 10 keys; pin bump; combined
+      suite green
+- [ ] S2-T4: agentic parity evidence — hermetic determinism harness (fakes,
+      fixed queries: routing, judge-retry, fake-tool live path): full trace
+      identical pre (`docpilot.agent` @ Stage-2 start) vs post
+      (`ragkit.agent`); + one live CLI/API smoke
+- [ ] S2-T5: exit sweep — READMEs honest, clean-venv install from git
+      (langgraph), tag `v0.2.0`, DocPilot pin ↔ tag recorded, §3.3 all
+      `[x]`, both repos pushed
+
+### 3.3 exit criteria (checked at stage close)
+- [ ] ragkit standalone test suite green (agent/tools tests included, hermetic)
+- [ ] combined DocPilot + ragkit suite green; moved unit tests live in
+      ragkit only
+- [ ] agentic parity evidence committed (hermetic harness + live smoke)
+- [ ] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.2.0`);
+      READMEs honest; both repos pushed; no secrets
 
 ## 4. Stage 3 — eval harness (planned)
 
