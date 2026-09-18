@@ -6,8 +6,9 @@ authority: derived — SPEC.md wins on conflict
 ## 1. status
 
 - origin: extracted from DocPilot (Phases 1–6 COMPLETE, 2026-09-12)
-- current: **Stage 2 — agentic, ACTIVE (started 2026-09-18 — Stage-1 close
-  reviewed and merge-ready: independent audit, no blockers)**
+- current: **Stage 2 — agentic, COMPLETE 2026-09-18 (`v0.2.0`; both repos
+  pushed). Next: Stage 3 — eval harness (planned §4), then Stage 4 — codegen
+  (§5) — both start on user go.**
 - source-of-truth extraction plan: DocPilot PLAN §8
   (<https://github.com/Saif-Ali-109/DocPilot/blob/main/PLAN.md>)
 
@@ -153,15 +154,130 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       from the tag verified; dirty eval reports + `opencode.jsonc`
       remain uncommitted on the DocPilot side
 
-## 4. Stage 3 — eval harness (planned)
+## 4. Stage 3 — eval harness (PLANNED 2026-09-18 — start on user go)
 
-- `eval/{benchmark,triples,__main__,judge_ab,tool_necessity}.py` →
-  `ragkit.eval` (Evaluator + checkpointed/TPD-aware harness)
+### 4.1 scope (move set, from DocPilot `src/docpilot/`)
 
-## 5. Stage 4 — codegen (planned)
+- `eval/benchmark.py`, `eval/triples.py`, `eval/judge_ab.py`,
+  `eval/tool_necessity.py` → `ragkit.eval` (Evaluator + checkpointed /
+  TPD-aware harness; mechanical `docpilot.eval` → `ragkit.eval` prefix swap)
+- `eval/__init__.py`, `eval/__main__.py` → `ragkit.eval` (`python -m
+  ragkit.eval` dispatcher). The `__main__` `code-benchmark` branch is
+  lazy-guarded until Stage 4 (`ragkit.eval.code_benchmark` lands then —
+  ImportError → clear "moves in Stage 4" message)
+- `eval/dataset/{benchmark,judge_triples,tool_necessity}.json` ship inside
+  `ragkit.eval` (committed labeled datasets — SPEC §6.4 rule). NOT moving now:
+  `dataset/code_benchmark.json` (rides with `code_benchmark.py`, Stage 4)
+- NOT moving: `eval/code_benchmark.py` (imports `validation` — a Stage-4
+  module; moving it now would create a `ragkit.eval → docpilot.validation`
+  reverse dep and break clean-venv imports), `eval/reports/` (runtime output
+  stays DocPilot-side; new JSONs never-commit)
+- tests move: `test_eval_benchmark.py`, `test_eval_judge_ab.py`,
+  `test_eval_tool_necessity.py` (hermetic — stubbed judge/generator; patch
+  sites → `ragkit.config`). `test_eval_code_benchmark.py` stays (Stage 4)
+- config: NO new framework keys — eval reads only keys already owned
+  (`AGENT_JUDGE_MODEL`, `GROQ_MODEL`, `RETRIEVAL_LANGUAGE`,
+  `RETRIEVAL_TOP_K`). Deps: no new — eval reuses ragkit core/agent + existing
+  deps
+- gate (mirror §3.1): DocPilot full suite green + eval parity sample —
+  hermetic determinism harness (fixed dataset rows + stubbed
+  retriever/generator/judge → report JSON identical pre/post) + one live
+  TPD-aware eval smoke (locked 2026-09-18)
 
-- `codegen/*`, `validation/*`, `agent/code_route.py` (Generator +
-  CodeValidator)
+### 4.2 tasks (execution order)
+
+- [ ] S3-T1: docs — this section (ragkit PLAN §4 / DocPilot PLAN §8.8) +
+      ACTIVE refresh, committed in both repos. Bundle: `eval/*` minus
+      `code_benchmark.py` + `reports/`.
+- [ ] S3-T2: move mechanically (prefix swap `docpilot.eval` → `ragkit.eval`)
+      into `ragkit.eval`: benchmark/triples/judge_ab/tool_necessity +
+      `__main__`/`__init__` + 3 committed dataset JSONs; `__main__`
+      code-benchmark lazy-guard; 3 hermetic eval test files move (patch
+      sites → `ragkit.config`); no new config keys or deps.
+- [ ] S3-T3: DocPilot dogfood — delete moved modules + tests from
+      `src/docpilot/`; rewire any staying consumers to `ragkit.eval`;
+      `python -m docpilot.eval` workflow → `python -m ragkit.eval`;
+      pyproject pin bump; combined suite green.
+- [ ] S3-T4: eval parity evidence — hermetic determinism harness: fixed
+      dataset rows + stubbed retriever/generator/judge drive the eval
+      pipeline pre (`docpilot.eval` @ Stage-3 start worktree) vs post
+      (`ragkit.eval`) — report JSON identical field-for-field; + one live
+      TPD-aware eval smoke (one invocation).
+- [ ] S3-T5: exit sweep — READMEs honest (ragkit status Stage 3; DocPilot
+      callout eval moved), clean-venv install from git (regression — no new
+      deps), tag `v0.3.0`, DocPilot pin → `@v0.3.0`, §4.3 / §8.8b all `[x]`,
+      both repos pushed, no secrets.
+
+### 4.3 exit criteria (checked at stage close)
+
+- [ ] ragkit standalone test suite green (eval tests included, hermetic — no
+      model/network; live-PG skips as before)
+- [ ] combined DocPilot + ragkit suite green; moved eval tests live in
+      ragkit only, no duplicated test files
+- [ ] eval parity evidence committed (hermetic report-JSON harness verdict +
+      live smoke output)
+- [ ] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.3.0`);
+      READMEs honest; both repos pushed; no secrets
+
+## 5. Stage 4 — codegen (PLANNED 2026-09-18 — start after Stage 3 closes)
+
+### 5.1 scope (move set, from DocPilot `src/docpilot/`)
+
+- `codegen/__init__.py`, `codegen/pipeline_ask_code.py`, `codegen/prompts.py`
+  → `ragkit.codegen` (Generator)
+- `validation/__init__.py`, `validation/validator.py`, `validation/verdict.py`
+  → `ragkit.validation` (CodeValidator)
+- `agent/code_route.py` → `ragkit.agent.code_route` (the agent router Stage 2
+  deferred; already wired to `ragkit.agent.*` APIs in S2-T3)
+- `eval/code_benchmark.py` + `eval/dataset/code_benchmark.json` →
+  `ragkit.eval` now importable (validation is in ragkit by then); the §4
+  `__main__` lazy-guard activates
+- config: `CODE_INTENT_PHRASES`, `CODE_ROUTE_ENABLED`,
+  `CODE_VALIDATE_MAX_TURNS` → `ragkit.config` (env-read, safe defaults
+  identical to DocPilot's today; DocPilot re-exports). No new deps — groq
+  already owned
+- tests move: `test_validation.py`, `test_codegen_pipeline.py`,
+  `test_code_route.py`, `test_code_route_loop.py`,
+  `test_eval_code_benchmark.py` (hermetic; patch sites → `ragkit.config`).
+  `test_api_code.py` stays DocPilot-side (API-level, app-facing)
+- NOT moving: `api/service.py` code endpoint (`POST /api/v1/code`), CLI code
+  wiring — DocPilot app surface stays app-side
+- gate: DocPilot full suite green + codegen parity sample — hermetic
+  determinism harness (stubbed generator/judge: identical validation verdicts
+  + emitted code pre/post) + one live codegen smoke (locked 2026-09-18)
+
+### 5.2 tasks (execution order)
+
+- [ ] S4-T1: docs — this section (ragkit PLAN §5 / DocPilot PLAN §8.9) +
+      ACTIVE refresh, committed in both repos.
+- [ ] S4-T2: move mechanically (prefix swap) into `ragkit.codegen` /
+      `ragkit.validation` / `ragkit.agent.code_route`; `ragkit.eval` gains
+      `code_benchmark` + `code_benchmark.json` (activate `__main__` branch);
+      `ragkit.config` gains the 3 `CODE_*` keys; 5 hermetic test files move.
+- [ ] S4-T3: DocPilot dogfood — rewire `api/service.py` code endpoint + CLI
+      code paths + staying app-level test (`test_api_code.py`) to
+      `ragkit.codegen` / `ragkit.validation` / `ragkit.agent.code_route`;
+      delete moved modules + tests; config re-exports the 3 `CODE_*` keys;
+      pin bump; combined suite green.
+- [ ] S4-T4: codegen parity evidence — hermetic determinism harness: stubbed
+      generator/judge — validation verdicts + emitted code identical pre
+      (`docpilot.*` @ Stage-4 start worktree) vs post (`ragkit.*`); + one
+      live codegen smoke (TPD-aware, one invocation).
+- [ ] S4-T5: exit sweep — READMEs honest, clean-venv install from git
+      (regression), tag `v0.4.0`, DocPilot pin → `@v0.4.0`, §5.3 / §8.9b all
+      `[x]`, both repos pushed, no secrets; **all §8.4 bundles moved →
+      extraction complete**.
+
+### 5.3 exit criteria (checked at stage close)
+
+- [ ] ragkit standalone test suite green (codegen/validation/code_route tests
+      included, hermetic)
+- [ ] combined DocPilot + ragkit suite green; moved tests live in ragkit only
+- [ ] codegen parity evidence committed (hermetic harness verdict + live
+      smoke output)
+- [ ] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.4.0`);
+      READMEs honest; both repos pushed; no secrets; all deferred bundles
+      moved
 
 ## 6. git workflow
 

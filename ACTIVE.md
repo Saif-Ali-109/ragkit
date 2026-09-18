@@ -6,12 +6,13 @@ load: read whole
 
 ## 1. Status
 
-- current_stage: Stage 2 — agentic, **ACTIVE** (started 2026-09-18 after the
-  Stage-1 close review — independent audit, merge-ready, no blockers)
+- current_stage: **Stage 2 — agentic, COMPLETE 2026-09-18** (`v0.2.0` tagged
+  and pushed; DocPilot pinned `@v0.2.0`). Next: Stage 3 — eval harness
+  (planned §4), then Stage 4 — codegen (§5) — both start on user go.
 - last_updated: 2026-09-18
-- test baseline: combined 552 (pre-extraction); current split ragkit 191
-  (190 passed, 1 skipped with a dev `.env`; 181 passed, 10 skipped hermetic)
-  + DocPilot 361
+- test baseline: combined 552 (pre-extraction); current split ragkit 299
+  (190 passed, 1 skipped with dev `.env`; 290 passed, 10 skipped hermetic)
+  + DocPilot 252
 - gate reference: combined DocPilot + ragkit suite ≥ 552 (locked 2026-09-18;
   unit tests live in ragkit only; the ragkit conftest optionally loads the
   repo-root `.env` — gitignored — so live-PG integration tests run when
@@ -79,6 +80,30 @@ load: read whole
   Stage 4) + `tools/*` + langgraph dep move; ragkit.config gains 10 keys
   (AGENT_*, GITHUB_*, RETRIEVAL_LANGUAGE); parity gate = hermetic harness +
   one live smoke (locked). Next: S2-T2 — mechanical move.
+- 2026-09-18 S2-T2: mechanical move — `docpilot.agent` → `ragkit.agent`,
+  `docpilot.tools` → `ragkit.tools` (prefix swap); `ragkit.config` extended
+  with 10 keys; langgraph dep added; 6 hermetic agent/tool test files moved.
+  `3ded3fb` — ragkit 299 passed/1 skipped, 290/10 hermetic.
+- 2026-09-18 S2-T3: DocPilot dogfood — `src/docpilot/` + `tests/` imports
+  rewired to `ragkit.agent.*` / `ragkit.tools.*`; moved modules + 6 test
+  files deleted; DocPilot config re-exports the 10 keys; pin → `@3ded3fb`.
+  DocPilot 252 + ragkit 300 = 552.
+- 2026-09-18 S2-T4: agentic parity evidence — hermetic determinism harness
+  (fakes, fixed queries: routing, judge-retry, fake-tool live path): full
+  trace identical pre (`docpilot.agent` @ Stage-2 start `391ebc8`) vs post
+  (`ragkit.agent`). 6/6 scenarios IDENTICAL + one live CLI smoke (`docpilot
+  ask --strategy agentic`, exit 0). Evidence: `parity/s2_*`.
+- 2026-09-18 S2-T5: exit sweep — READMEs honest, clean-venv install from git
+  `@v0.2.0` (deps incl. langgraph 1.2.11 resolved; imports OK; `docpilot`
+  not importable), tag `v0.2.0` (`500717d`), DocPilot pin → `@v0.2.0`,
+  §3.3 / §8.7b all `[x]`, both repos pushed. **Stage 2 COMPLETE.**
+- Stages 3 & 4 planned (§4, §5): Stage 3 moves `eval/benchmark`,
+  `triples`, `judge_ab`, `tool_necessity`, `__main__`/`__init__`, 3 dataset
+  JSONs → `ragkit.eval` (hermetic eval tests + parity gate). Stage 4 moves
+  `codegen/*`, `validation/*`, `agent/code_route.py`,
+  `eval/code_benchmark.py` + dataset → `ragkit.codegen` /
+  `ragkit.validation` / `ragkit.agent.code_route` / `ragkit.eval` (3
+  CODE_* config keys). Both stages: full parity harness + 1 live smoke each.
 
 ## 3. Load index
 
@@ -86,8 +111,12 @@ load: read whole
 |---|---|---|
 | SPEC.md | all | always (short, read whole) |
 | PLAN.md | §2 Stage 1 | stage-1 work |
-| PLAN.md | §3–§5 | later stages |
-| DocPilot PLAN §8 | 1231–1364 | always — source-of-truth extraction plan |
+| PLAN.md | §3 Stage 2 | stage-2 work (agentic) |
+| PLAN.md | §4 Stage 3 | stage-3 work (eval) |
+| PLAN.md | §5 Stage 4 | stage-4 work (codegen) |
+| DocPilot PLAN §8 | 1231–1438 | always — source-of-truth extraction plan |
+| DocPilot PLAN §8.8 | 1439–1480 | stage-3 work (eval) |
+| DocPilot PLAN §8.9 | 1481–1530 | stage-4 work (codegen) |
 
 ## 4. Refresh rules
 
