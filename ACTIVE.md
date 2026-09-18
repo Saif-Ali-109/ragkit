@@ -10,9 +10,12 @@ load: read whole
   tagged + pushed); paused for review before Stage 2 (agentic)
 - last_updated: 2026-09-18
 - test baseline: combined 552 (pre-extraction); current split ragkit 191
-  (181 passed, 10 skipped) + DocPilot 361
+  (190 passed, 1 skipped with a dev `.env`; 181 passed, 10 skipped hermetic)
+  + DocPilot 361
 - gate reference: combined DocPilot + ragkit suite ≥ 552 (locked 2026-09-18;
-  unit tests live in ragkit only)
+  unit tests live in ragkit only; the ragkit conftest optionally loads the
+  repo-root `.env` — gitignored — so live-PG integration tests run when
+  credentials are present, else hermetic-skip: totals unchanged)
 
 ## 2. What happened (work state)
 
@@ -63,6 +66,13 @@ load: read whole
   `ragkit.config` safe defaults), `v0.1.0` annotated tag pushed on ragkit,
   DocPilot pyproject pin → `@v0.1.0`, §8.5 all `[x]`, no secrets, both repos
   pushed. **Stage 1 COMPLETE — paused for review before Stage 2 (agentic).**
+- 2026-09-18 post-close follow-up (independent Stage-1 audit): verdict
+  merge-ready — no blockers, no major code findings. Applied fixes: DocPilot
+  PLAN §8.3 S1-T5/T6/T7 checkboxes (were stale `[ ]`); ragkit skip-string
+  + load-index nits. ragkit test conftest now optionally loads the
+  repo-root `.env` (gitignored) so the 9 live-PG integration tests run on
+  dev machines with credentials — suite 190 passed, 1 skipped there;
+  hermetic baseline (no `.env`) 181 passed, 10 skipped; totals identical.
 
 ## 3. Load index
 
@@ -71,7 +81,7 @@ load: read whole
 | SPEC.md | all | always (short, read whole) |
 | PLAN.md | §2 Stage 1 | stage-1 work |
 | PLAN.md | §3–§5 | later stages |
-| DocPilot PLAN §8 | 1231–1323 | always — source-of-truth extraction plan |
+| DocPilot PLAN §8 | 1231–1364 | always — source-of-truth extraction plan |
 
 ## 4. Refresh rules
 

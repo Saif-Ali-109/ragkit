@@ -197,7 +197,7 @@ class TestPostgresFTSSearcher:
             from ragkit.db.connection import ensure_schema, get_connection
             from ragkit.retrieval.vector_store import PgVectorStore
         except Exception as exc:  # pragma: no cover
-            pytest.skip(f"docpilot deps unavailable: {exc}")
+            pytest.skip(f"ragkit deps unavailable: {exc}")
 
         try:
             conn = get_connection()
