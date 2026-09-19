@@ -229,7 +229,7 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       both repos pushed, no secrets. — DONE 2026-09-19 (READMEs both repos
       Stage-3 honest; clean venv from `git+…ragkit.git@v0.3.0` — deps
       unchanged vs `v0.2.0` (empty pyproject diff), imports OK; ragkit 409/1
-      + DocPilot 142 = 552; tag `v0.3.0` = `15e2aa1`; DocPilot pin
+      + DocPilot 142 = 552; tag `v0.3.0` = `f03c2e7`; DocPilot pin
       `@v0.3.0`; both pushed)
 
 ### 4.3 exit criteria (checked at stage close)
