@@ -9,3 +9,7 @@ build/
 .ruff_cache/
 .coverage
 htmlcov/
+# scratch storage (never committed — e.g. data/docpilot.sqlite3)
+data/
+# live eval report JSONs (never committed — SPEC §6.5 runtime output)
+src/ragkit/eval/reports/

@@ -186,9 +186,10 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
 
 ### 4.2 tasks (execution order)
 
-- [ ] S3-T1: docs — this section (ragkit PLAN §4 / DocPilot PLAN §8.8) +
+- [x] S3-T1: docs — this section (ragkit PLAN §4 / DocPilot PLAN §8.8) +
       ACTIVE refresh, committed in both repos. Bundle: `eval/*` minus
-      `code_benchmark.py` + `reports/`.
+      `code_benchmark.py` + `reports/`. — DONE 2026-09-18 (ragkit `b8f35b5` /
+      DocPilot `6122c8c`; both PLANs + ACTIVE committed and pushed)
 - [ ] S3-T2: move mechanically (prefix swap `docpilot.eval` → `ragkit.eval`)
       into `ragkit.eval`: benchmark/triples/judge_ab/tool_necessity +
       `__main__`/`__init__` + 3 committed dataset JSONs; `__main__`
