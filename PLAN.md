@@ -190,11 +190,13 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       ACTIVE refresh, committed in both repos. Bundle: `eval/*` minus
       `code_benchmark.py` + `reports/`. — DONE 2026-09-18 (ragkit `b8f35b5` /
       DocPilot `6122c8c`; both PLANs + ACTIVE committed and pushed)
-- [ ] S3-T2: move mechanically (prefix swap `docpilot.eval` → `ragkit.eval`)
+- [x] S3-T2: move mechanically (prefix swap `docpilot.eval` → `ragkit.eval`)
       into `ragkit.eval`: benchmark/triples/judge_ab/tool_necessity +
       `__main__`/`__init__` + 3 committed dataset JSONs; `__main__`
       code-benchmark lazy-guard; 3 hermetic eval test files move (patch
-      sites → `ragkit.config`); no new config keys or deps.
+      sites → `ragkit.config`); no new config keys or deps. — DONE
+      2026-09-19 (ragkit `309037b`; `_classic_run` resolves direct_ask via
+      `ragkit.agent.host_wiring`, zero docpilot refs in ragkit src)
 - [x] S3-T3: DocPilot dogfood — delete moved modules + tests from
       `src/docpilot/`; rewire any staying consumers to `ragkit.eval`;
       `python -m docpilot.eval` workflow → `python -m ragkit.eval`;
@@ -221,21 +223,26 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       s3_smoke` — exit 0, 24 triples × 2 prompts (48 live Groq judge calls,
       no TPD abort), report written only to the never-commit dir;
       `parity/s3_eval_smoke.txt` committed)
-- [ ] S3-T5: exit sweep — READMEs honest (ragkit status Stage 3; DocPilot
+- [x] S3-T5: exit sweep — READMEs honest (ragkit status Stage 3; DocPilot
       callout eval moved), clean-venv install from git (regression — no new
       deps), tag `v0.3.0`, DocPilot pin → `@v0.3.0`, §4.3 / §8.8b all `[x]`,
-      both repos pushed, no secrets.
+      both repos pushed, no secrets. — DONE 2026-09-19 (READMEs both repos
+      Stage-3 honest; clean venv from `git+…ragkit.git@v0.3.0` — deps
+      unchanged vs `v0.2.0` (empty pyproject diff), imports OK; ragkit 409/1
+      + DocPilot 142 = 552; tag `v0.3.0` = `15e2aa1`; DocPilot pin
+      `@v0.3.0`; both pushed)
 
 ### 4.3 exit criteria (checked at stage close)
 
-- [ ] ragkit standalone test suite green (eval tests included, hermetic — no
-      model/network; live-PG skips as before)
-- [ ] combined DocPilot + ragkit suite green; moved eval tests live in
-      ragkit only, no duplicated test files
-- [ ] eval parity evidence committed (hermetic report-JSON harness verdict +
-      live smoke output)
-- [ ] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.3.0`);
-      READMEs honest; both repos pushed; no secrets
+- [x] ragkit standalone test suite green (eval tests included, hermetic — no
+      model/network; live-PG skips as before) — DONE: 409 passed/1 skipped
+- [x] combined DocPilot + ragkit suite green; moved eval tests live in
+      ragkit only, no duplicated test files — DONE: DocPilot 142 + ragkit
+      410 = 552
+- [x] eval parity evidence committed (hermetic report-JSON harness verdict +
+      live smoke output) — DONE: S3-T4, `parity/s3_eval_*`
+- [x] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.3.0`);
+      READMEs honest; both repos pushed; no secrets — DONE: S3-T5
 
 ## 5. Stage 4 — codegen (PLANNED 2026-09-18 — start after Stage 3 closes)
 
