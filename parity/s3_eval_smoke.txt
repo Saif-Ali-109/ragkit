@@ -1,0 +1,21 @@
+Judge two-prompt A/B — dataset: /home/ain/Desktop/framework/ragkit/src/ragkit/eval/dataset/judge_triples.json (24 triples)
+winner: tie (calibration-only outcome; adoption is the client's call)
+
+metric                         A         B
+------------------------------------------
+verdict_accuracy           1.000     1.000
+adversarial_accuracy       1.000     1.000
+parse_failure_rate         0.000     0.000
+------------------------------------------
+Per-category accuracy (A / B):
+  sufficient-direct        1.000 / 1.000    (n=6)
+  sufficient-partial       1.000 / 1.000    (n=6)
+  insufficient-missing     1.000 / 1.000    (n=6)
+  adversarial              1.000 / 1.000    (n=6)
+
+Confusion (gold → predicted): A / B
+  sufficient   sufficient: 15/15  insufficient: 0/0
+  insufficient sufficient: 0/0  insufficient: 9/9
+
+  prompt A parse failures: none
+  prompt B parse failures: none

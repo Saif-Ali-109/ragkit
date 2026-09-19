@@ -1,0 +1,1961 @@
+{
+  "benchmark": {
+    "agentic": {
+      "dataset_path": "-",
+      "generated_at": "2026-09-19T00:00:00",
+      "metrics": {
+        "answer_correctness": 1.0,
+        "avg_latency_ms": 114.5,
+        "avg_retrieval_calls": 1.0,
+        "avg_tool_calls": 0.133,
+        "citation_gold_accuracy": 1.0,
+        "citation_gold_n": 20,
+        "citation_validity": 1.0,
+        "citation_validity_n": 20,
+        "groundedness_n": 24,
+        "groundedness_rate": 1.0,
+        "recall_n": 20,
+        "refusal_accuracy": 1.0,
+        "refusal_n": 6,
+        "retrieval_recall_at_k": 1.0,
+        "total_tool_calls": 4
+      },
+      "note": "",
+      "pipeline": "agentic",
+      "rows": [
+        {
+          "answer": "default value [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd01",
+          "latency_ms": 100.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/query-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "type path parameter [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd02",
+          "latency_ms": 101.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/path-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "response_model [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd03",
+          "latency_ms": 102.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/response-model.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "background task after [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd04",
+          "latency_ms": 103.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/background-tasks.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "request body Pydantic [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd05",
+          "latency_ms": 104.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/body.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "optional [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd06",
+          "latency_ms": 105.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/query-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "/users/me before [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd07",
+          "latency_ms": 106.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/path-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Cookie [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd08",
+          "latency_ms": 107.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/cookie-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Answer text.",
+          "answer_correct": 1.0,
+          "category": "live-state-answerable",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bl01",
+          "latency_ms": 108.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 1
+        },
+        {
+          "answer": "Answer text.",
+          "answer_correct": 1.0,
+          "category": "live-state-answerable",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bl02",
+          "latency_ms": 109.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 1
+        },
+        {
+          "answer": "Answer text.",
+          "answer_correct": 1.0,
+          "category": "live-state-answerable",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bl03",
+          "latency_ms": 110.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 1
+        },
+        {
+          "answer": "Answer text.",
+          "answer_correct": 1.0,
+          "category": "live-state-answerable",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bl04",
+          "latency_ms": 111.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 1
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn01",
+          "latency_ms": 112.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn02",
+          "latency_ms": 113.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn03",
+          "latency_ms": 114.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "RequestValidationError exception handler [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd09",
+          "latency_ms": 115.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/handling-errors.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "status_code [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd10",
+          "latency_ms": 116.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/response-status-code.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "response_model response_model_exclude_unset [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd11",
+          "latency_ms": 117.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/response-model.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "CORSMiddleware allow_origins [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd12",
+          "latency_ms": 118.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/cors.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "UploadFile File [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd13",
+          "latency_ms": 119.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/request-files.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "APIRouter include_router [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd14",
+          "latency_ms": 120.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/bigger-applications.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "JSONResponse [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd15",
+          "latency_ms": 121.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/advanced/custom-response.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "path parameter request body [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd16",
+          "latency_ms": 122.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/path-params.md",
+            "en/docs/tutorial/body.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Header [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd17",
+          "latency_ms": 123.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/header-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Depends dependencies [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd18",
+          "latency_ms": 124.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/dependencies/index.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "@app.middleware [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd19",
+          "latency_ms": 125.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/middleware.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Form [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd20",
+          "latency_ms": 126.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/request-forms.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn04",
+          "latency_ms": 127.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn05",
+          "latency_ms": 128.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn06",
+          "latency_ms": 129.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        }
+      ]
+    },
+    "classic": {
+      "dataset_path": "-",
+      "generated_at": "2026-09-19T00:00:00",
+      "metrics": {
+        "answer_correctness": 0.9333,
+        "avg_latency_ms": 114.5,
+        "avg_retrieval_calls": 1.0,
+        "avg_tool_calls": 0.0,
+        "citation_gold_accuracy": 1.0,
+        "citation_gold_n": 20,
+        "citation_validity": 1.0,
+        "citation_validity_n": 20,
+        "groundedness_n": 24,
+        "groundedness_rate": 1.0,
+        "recall_n": 20,
+        "refusal_accuracy": 1.0,
+        "refusal_n": 6,
+        "retrieval_recall_at_k": 1.0,
+        "total_tool_calls": 0
+      },
+      "note": "",
+      "pipeline": "classic",
+      "rows": [
+        {
+          "answer": "default value [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd01",
+          "latency_ms": 100.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/query-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "type path parameter [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd02",
+          "latency_ms": 101.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/path-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "response_model [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd03",
+          "latency_ms": 102.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/response-model.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "background task after [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd04",
+          "latency_ms": 103.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/background-tasks.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "request body Pydantic [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd05",
+          "latency_ms": 104.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/body.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "optional [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd06",
+          "latency_ms": 105.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/query-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "/users/me before [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd07",
+          "latency_ms": 106.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/path-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Cookie [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd08",
+          "latency_ms": 107.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/cookie-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Answer text.",
+          "answer_correct": 0.5,
+          "category": "live-state-answerable",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bl01",
+          "latency_ms": 108.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Answer text.",
+          "answer_correct": 0.5,
+          "category": "live-state-answerable",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bl02",
+          "latency_ms": 109.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Answer text.",
+          "answer_correct": 0.5,
+          "category": "live-state-answerable",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bl03",
+          "latency_ms": 110.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Answer text.",
+          "answer_correct": 0.5,
+          "category": "live-state-answerable",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bl04",
+          "latency_ms": 111.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn01",
+          "latency_ms": 112.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn02",
+          "latency_ms": 113.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn03",
+          "latency_ms": 114.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "RequestValidationError exception handler [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd09",
+          "latency_ms": 115.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/handling-errors.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "status_code [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd10",
+          "latency_ms": 116.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/response-status-code.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "response_model response_model_exclude_unset [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd11",
+          "latency_ms": 117.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/response-model.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "CORSMiddleware allow_origins [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd12",
+          "latency_ms": 118.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/cors.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "UploadFile File [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd13",
+          "latency_ms": 119.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/request-files.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "APIRouter include_router [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd14",
+          "latency_ms": 120.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/bigger-applications.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "JSONResponse [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd15",
+          "latency_ms": 121.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/advanced/custom-response.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "path parameter request body [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd16",
+          "latency_ms": 122.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/path-params.md",
+            "en/docs/tutorial/body.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Header [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd17",
+          "latency_ms": 123.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/header-params.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Depends dependencies [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd18",
+          "latency_ms": 124.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/dependencies/index.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "@app.middleware [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd19",
+          "latency_ms": 125.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/middleware.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "Form [1]",
+          "answer_correct": 1.0,
+          "category": "docs-answerable",
+          "citation_gold_accuracy": 1.0,
+          "citation_validity": 1.0,
+          "gold_refusal": false,
+          "grounded": true,
+          "id": "bd20",
+          "latency_ms": 126.0,
+          "marker_count": 1,
+          "recall": 1.0,
+          "refused": false,
+          "retrieval_calls": 1,
+          "source_files": [
+            "en/docs/tutorial/request-forms.md"
+          ],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn04",
+          "latency_ms": 127.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn05",
+          "latency_ms": 128.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        },
+        {
+          "answer": "I don't know.",
+          "answer_correct": 1.0,
+          "category": "neither",
+          "citation_gold_accuracy": null,
+          "citation_validity": null,
+          "gold_refusal": true,
+          "grounded": null,
+          "id": "bn06",
+          "latency_ms": 129.0,
+          "marker_count": 0,
+          "recall": null,
+          "refused": true,
+          "retrieval_calls": 1,
+          "source_files": [],
+          "tool_calls": 0
+        }
+      ]
+    },
+    "comparison": {
+      "metrics": [
+        {
+          "agentic": 1.0,
+          "classic": 0.9333,
+          "direction": "higher",
+          "metric": "answer_correctness",
+          "winner": "agentic"
+        },
+        {
+          "agentic": 1.0,
+          "classic": 1.0,
+          "direction": "higher",
+          "metric": "retrieval_recall@k (docs)",
+          "winner": "tie"
+        },
+        {
+          "agentic": 1.0,
+          "classic": 1.0,
+          "direction": "higher",
+          "metric": "citation_validity",
+          "winner": "tie"
+        },
+        {
+          "agentic": 1.0,
+          "classic": 1.0,
+          "direction": "higher",
+          "metric": "citation_gold_accuracy (docs)",
+          "winner": "tie"
+        },
+        {
+          "agentic": 1.0,
+          "classic": 1.0,
+          "direction": "higher",
+          "metric": "refusal_accuracy (I-don't-know)",
+          "winner": "tie"
+        },
+        {
+          "agentic": 1.0,
+          "classic": 1.0,
+          "direction": "higher",
+          "metric": "groundedness_rate",
+          "winner": "tie"
+        },
+        {
+          "agentic": 114.5,
+          "classic": 114.5,
+          "direction": "lower",
+          "metric": "avg_latency_ms",
+          "winner": "tie"
+        },
+        {
+          "agentic": 1.0,
+          "classic": 1.0,
+          "direction": "lower",
+          "metric": "avg_retrieval_calls",
+          "winner": "tie"
+        },
+        {
+          "agentic": 0.1333,
+          "classic": 0.0,
+          "direction": "lower",
+          "metric": "avg_tool_calls",
+          "winner": "classic"
+        }
+      ],
+      "summary": "1 classic / 1 agentic / 7 ties over 9 decided metrics"
+    }
+  },
+  "judge_ab": {
+    "dataset_path": "dataset/judge_triples.json",
+    "generated_at": "2026-09-19T00:00:00",
+    "note": "",
+    "prompts": {
+      "A": {
+        "adversarial_accuracy": 0.8333,
+        "confusion": {
+          "insufficient": {
+            "insufficient": 7,
+            "sufficient": 2
+          },
+          "sufficient": {
+            "insufficient": 3,
+            "sufficient": 12
+          }
+        },
+        "n": 24,
+        "parse_failure_rate": 0.0,
+        "parse_failures": [],
+        "per_category": {
+          "adversarial": {
+            "accuracy": 0.8333,
+            "correct": 5,
+            "total": 6
+          },
+          "insufficient-missing": {
+            "accuracy": 0.8333,
+            "correct": 5,
+            "total": 6
+          },
+          "sufficient-direct": {
+            "accuracy": 0.6667,
+            "correct": 4,
+            "total": 6
+          },
+          "sufficient-partial": {
+            "accuracy": 0.8333,
+            "correct": 5,
+            "total": 6
+          }
+        },
+        "prompt_name": "A",
+        "rows": [
+          {
+            "category": "sufficient-direct",
+            "correct": false,
+            "gold": "sufficient",
+            "id": "t01",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "sufficient-direct",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t02",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-direct",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t03",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-direct",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t04",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-direct",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t05",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-direct",
+            "correct": false,
+            "gold": "sufficient",
+            "id": "t06",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t07",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t08",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t09",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t10",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": false,
+            "gold": "sufficient",
+            "id": "t11",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t12",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t13",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t14",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t15",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": false,
+            "gold": "insufficient",
+            "id": "t16",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t17",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t18",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t19",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t20",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": false,
+            "gold": "insufficient",
+            "id": "t21",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t22",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t23",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t24",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          }
+        ],
+        "verdict_accuracy": 0.7917
+      },
+      "B": {
+        "adversarial_accuracy": 0.8333,
+        "confusion": {
+          "insufficient": {
+            "insufficient": 7,
+            "sufficient": 2
+          },
+          "sufficient": {
+            "insufficient": 3,
+            "sufficient": 12
+          }
+        },
+        "n": 24,
+        "parse_failure_rate": 0.0,
+        "parse_failures": [],
+        "per_category": {
+          "adversarial": {
+            "accuracy": 0.8333,
+            "correct": 5,
+            "total": 6
+          },
+          "insufficient-missing": {
+            "accuracy": 0.8333,
+            "correct": 5,
+            "total": 6
+          },
+          "sufficient-direct": {
+            "accuracy": 0.6667,
+            "correct": 4,
+            "total": 6
+          },
+          "sufficient-partial": {
+            "accuracy": 0.8333,
+            "correct": 5,
+            "total": 6
+          }
+        },
+        "prompt_name": "B",
+        "rows": [
+          {
+            "category": "sufficient-direct",
+            "correct": false,
+            "gold": "sufficient",
+            "id": "t01",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "sufficient-direct",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t02",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-direct",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t03",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-direct",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t04",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-direct",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t05",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-direct",
+            "correct": false,
+            "gold": "sufficient",
+            "id": "t06",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t07",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t08",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t09",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t10",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": false,
+            "gold": "sufficient",
+            "id": "t11",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "sufficient-partial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t12",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t13",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t14",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t15",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": false,
+            "gold": "insufficient",
+            "id": "t16",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t17",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "insufficient-missing",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t18",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t19",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t20",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": false,
+            "gold": "insufficient",
+            "id": "t21",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t22",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": true,
+            "gold": "insufficient",
+            "id": "t23",
+            "parse_fallback": false,
+            "predicted": "insufficient"
+          },
+          {
+            "category": "adversarial",
+            "correct": true,
+            "gold": "sufficient",
+            "id": "t24",
+            "parse_fallback": false,
+            "predicted": "sufficient"
+          }
+        ],
+        "verdict_accuracy": 0.7917
+      }
+    },
+    "triple_count": 24,
+    "winner": "tie"
+  },
+  "meta": {
+    "dataset_sizes": {
+      "benchmark": 30,
+      "judge_triples": 24,
+      "tool_necessity": 15
+    },
+    "docpilot_sha": "1d9bda2",
+    "hermetic": true,
+    "normalized": [
+      "generated_at",
+      "dataset_path"
+    ],
+    "ragkit_sha": "68b7790",
+    "side": "post",
+    "timestamp": "2026-09-19T08:49:31.228037+00:00"
+  },
+  "tool_necessity": {
+    "dataset_path": "-",
+    "false_negative_rate": 0.2,
+    "false_positive_rate": 0.2,
+    "generated_at": "2026-09-19T00:00:00",
+    "n": 15,
+    "neither_fire_rate": 0.2,
+    "note": "",
+    "per_class": {
+      "docs-answerable": {
+        "fires": 1,
+        "needs_tool_accuracy": 0.8,
+        "total": 5,
+        "verdict_accuracy": 0.8
+      },
+      "live-state-answerable": {
+        "fires": 4,
+        "needs_tool_accuracy": 0.8,
+        "total": 5,
+        "verdict_accuracy": 0.8
+      },
+      "neither": {
+        "fires": 1,
+        "needs_tool_accuracy": 0.8,
+        "total": 5,
+        "verdict_accuracy": 0.8
+      }
+    },
+    "rows": [
+      {
+        "class": "docs-answerable",
+        "correct_verdict": false,
+        "gold_needs_tool": false,
+        "gold_tool_action": null,
+        "gold_verdict": "sufficient",
+        "id": "td01",
+        "parse_fallback": false,
+        "predicted_action": "github.search_issues",
+        "predicted_needs_tool": true,
+        "predicted_verdict": "insufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": true
+      },
+      {
+        "class": "docs-answerable",
+        "correct_verdict": true,
+        "gold_needs_tool": false,
+        "gold_tool_action": null,
+        "gold_verdict": "sufficient",
+        "id": "td02",
+        "parse_fallback": false,
+        "predicted_action": null,
+        "predicted_needs_tool": false,
+        "predicted_verdict": "sufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": false
+      },
+      {
+        "class": "docs-answerable",
+        "correct_verdict": true,
+        "gold_needs_tool": false,
+        "gold_tool_action": null,
+        "gold_verdict": "sufficient",
+        "id": "td03",
+        "parse_fallback": false,
+        "predicted_action": null,
+        "predicted_needs_tool": false,
+        "predicted_verdict": "sufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": false
+      },
+      {
+        "class": "docs-answerable",
+        "correct_verdict": true,
+        "gold_needs_tool": false,
+        "gold_tool_action": null,
+        "gold_verdict": "sufficient",
+        "id": "td04",
+        "parse_fallback": false,
+        "predicted_action": null,
+        "predicted_needs_tool": false,
+        "predicted_verdict": "sufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": false
+      },
+      {
+        "class": "docs-answerable",
+        "correct_verdict": true,
+        "gold_needs_tool": false,
+        "gold_tool_action": null,
+        "gold_verdict": "sufficient",
+        "id": "td05",
+        "parse_fallback": false,
+        "predicted_action": null,
+        "predicted_needs_tool": false,
+        "predicted_verdict": "sufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": false
+      },
+      {
+        "class": "live-state-answerable",
+        "correct_verdict": false,
+        "gold_needs_tool": true,
+        "gold_tool_action": "github.search_issues",
+        "gold_verdict": "insufficient",
+        "id": "tl01",
+        "parse_fallback": false,
+        "predicted_action": "github.search_issues",
+        "predicted_needs_tool": true,
+        "predicted_verdict": "sufficient",
+        "tool_action_matches": true,
+        "tool_request_valid": true
+      },
+      {
+        "class": "live-state-answerable",
+        "correct_verdict": true,
+        "gold_needs_tool": true,
+        "gold_tool_action": "github.get_commits",
+        "gold_verdict": "insufficient",
+        "id": "tl02",
+        "parse_fallback": false,
+        "predicted_action": "github.get_commits",
+        "predicted_needs_tool": true,
+        "predicted_verdict": "insufficient",
+        "tool_action_matches": true,
+        "tool_request_valid": true
+      },
+      {
+        "class": "live-state-answerable",
+        "correct_verdict": true,
+        "gold_needs_tool": true,
+        "gold_tool_action": "github.list_issues",
+        "gold_verdict": "insufficient",
+        "id": "tl03",
+        "parse_fallback": false,
+        "predicted_action": null,
+        "predicted_needs_tool": false,
+        "predicted_verdict": "insufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": false
+      },
+      {
+        "class": "live-state-answerable",
+        "correct_verdict": true,
+        "gold_needs_tool": true,
+        "gold_tool_action": "github.get_commits",
+        "gold_verdict": "insufficient",
+        "id": "tl04",
+        "parse_fallback": false,
+        "predicted_action": "github.get_commits",
+        "predicted_needs_tool": true,
+        "predicted_verdict": "insufficient",
+        "tool_action_matches": true,
+        "tool_request_valid": true
+      },
+      {
+        "class": "live-state-answerable",
+        "correct_verdict": true,
+        "gold_needs_tool": true,
+        "gold_tool_action": "github.search_issues",
+        "gold_verdict": "insufficient",
+        "id": "tl05",
+        "parse_fallback": false,
+        "predicted_action": "github.search_issues",
+        "predicted_needs_tool": true,
+        "predicted_verdict": "insufficient",
+        "tool_action_matches": true,
+        "tool_request_valid": true
+      },
+      {
+        "class": "neither",
+        "correct_verdict": false,
+        "gold_needs_tool": false,
+        "gold_tool_action": null,
+        "gold_verdict": "insufficient",
+        "id": "tn01",
+        "parse_fallback": false,
+        "predicted_action": null,
+        "predicted_needs_tool": false,
+        "predicted_verdict": "sufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": false
+      },
+      {
+        "class": "neither",
+        "correct_verdict": true,
+        "gold_needs_tool": false,
+        "gold_tool_action": null,
+        "gold_verdict": "insufficient",
+        "id": "tn02",
+        "parse_fallback": false,
+        "predicted_action": null,
+        "predicted_needs_tool": false,
+        "predicted_verdict": "insufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": false
+      },
+      {
+        "class": "neither",
+        "correct_verdict": true,
+        "gold_needs_tool": false,
+        "gold_tool_action": null,
+        "gold_verdict": "insufficient",
+        "id": "tn03",
+        "parse_fallback": false,
+        "predicted_action": null,
+        "predicted_needs_tool": false,
+        "predicted_verdict": "insufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": false
+      },
+      {
+        "class": "neither",
+        "correct_verdict": true,
+        "gold_needs_tool": false,
+        "gold_tool_action": null,
+        "gold_verdict": "insufficient",
+        "id": "tn04",
+        "parse_fallback": false,
+        "predicted_action": null,
+        "predicted_needs_tool": false,
+        "predicted_verdict": "insufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": false
+      },
+      {
+        "class": "neither",
+        "correct_verdict": true,
+        "gold_needs_tool": false,
+        "gold_tool_action": null,
+        "gold_verdict": "insufficient",
+        "id": "tn05",
+        "parse_fallback": false,
+        "predicted_action": "github.search_issues",
+        "predicted_needs_tool": true,
+        "predicted_verdict": "insufficient",
+        "tool_action_matches": false,
+        "tool_request_valid": true
+      }
+    ],
+    "tool_action_match_rate": 0.6667,
+    "tool_request_valid_rate": 1.0,
+    "verdict_accuracy": 0.8
+  }
+}

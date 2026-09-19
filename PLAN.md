@@ -206,11 +206,21 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       module still runnable as `python -m docpilot.eval.code_benchmark`);
       pin → `@309037b` (S3-T2 commit; `v0.3.0` tag at S3-T5); DocPilot 142
       + ragkit 410 = 552 baseline held)
-- [ ] S3-T4: eval parity evidence — hermetic determinism harness: fixed
+- [x] S3-T4: eval parity evidence — hermetic determinism harness: fixed
       dataset rows + stubbed retriever/generator/judge drive the eval
       pipeline pre (`docpilot.eval` @ Stage-3 start worktree) vs post
       (`ragkit.eval`) — report JSON identical field-for-field; + one live
-      TPD-aware eval smoke (one invocation).
+      TPD-aware eval smoke (one invocation). — DONE 2026-09-19
+      (`parity/s3_eval_parity.py` + `compare_s3_eval.py`: scripted judges +
+      scripted benchmark runner over the committed datasets — judge_ab 24,
+      tool_necessity 15, benchmark 30 — `generated_at`/`dataset_path`
+      normalised; pre=`docpilot.eval`@`6122c8c` vs post=`ragkit.eval`@
+      `68b7790`: every report JSON IDENTICAL field-for-field, exit 0;
+      `s3_eval_parity_report.md` committed. Live TPD-aware smoke: one
+      invocation `python -m ragkit.eval judge-ab --out /tmp/opencode/
+      s3_smoke` — exit 0, 24 triples × 2 prompts (48 live Groq judge calls,
+      no TPD abort), report written only to the never-commit dir;
+      `parity/s3_eval_smoke.txt` committed)
 - [ ] S3-T5: exit sweep — READMEs honest (ragkit status Stage 3; DocPilot
       callout eval moved), clean-venv install from git (regression — no new
       deps), tag `v0.3.0`, DocPilot pin → `@v0.3.0`, §4.3 / §8.8b all `[x]`,
