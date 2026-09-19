@@ -195,10 +195,17 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       `__main__`/`__init__` + 3 committed dataset JSONs; `__main__`
       code-benchmark lazy-guard; 3 hermetic eval test files move (patch
       sites → `ragkit.config`); no new config keys or deps.
-- [ ] S3-T3: DocPilot dogfood — delete moved modules + tests from
+- [x] S3-T3: DocPilot dogfood — delete moved modules + tests from
       `src/docpilot/`; rewire any staying consumers to `ragkit.eval`;
       `python -m docpilot.eval` workflow → `python -m ragkit.eval`;
-      pyproject pin bump; combined suite green.
+      pyproject pin bump; combined suite green. — DONE 2026-09-19
+      (eval modules + 3 tests deleted from `src/docpilot/`; staying
+      `code_benchmark.py` + `test_eval_code_benchmark.py` rewire to
+      `ragkit.eval.benchmark`; `python -m docpilot.eval` → `python -m
+      ragkit.eval` (code-benchmark dispatcher lazy-guarded until Stage 4,
+      module still runnable as `python -m docpilot.eval.code_benchmark`);
+      pin → `@309037b` (S3-T2 commit; `v0.3.0` tag at S3-T5); DocPilot 142
+      + ragkit 410 = 552 baseline held)
 - [ ] S3-T4: eval parity evidence — hermetic determinism harness: fixed
       dataset rows + stubbed retriever/generator/judge drive the eval
       pipeline pre (`docpilot.eval` @ Stage-3 start worktree) vs post
