@@ -4,9 +4,8 @@ Subcommands (SPEC §6.2 slices):
   - ``judge-ab``        (default) judge two-prompt A/B calibration
   - ``tool-necessity``  tri-class tool-trigger necessity measurement
   - ``benchmark``       §6.1 classic-vs-agentic comparison over the benchmark
-  - ``code-benchmark``  Phase 6 code eval — moves into `ragkit.eval` in
-                        Stage 4; dispatching it here raises a clear error
-                        until then
+  - ``code-benchmark``  Phase 6 code eval (SPEC §8) — the code benchmark
+                        shipped in Stage 4 alongside `ragkit.validation`
 """
 
 from __future__ import annotations
@@ -25,12 +24,9 @@ def main(argv: list[str] | None = None) -> int:
 
         return benchmark_main(args[1:])
     if args and args[0] == "code-benchmark":
-        print(
-            "ragkit.eval: `code-benchmark` moves to this package in Stage 4; "
-            "it is not available yet. Nothing ran.",
-            file=sys.stderr,
-        )
-        return 2
+        from ragkit.eval.code_benchmark import main as code_benchmark_main
+
+        return code_benchmark_main(args[1:])
     from ragkit.eval.judge_ab import main as judge_ab_main
 
     return judge_ab_main(args)

@@ -78,3 +78,39 @@ GITHUB_OWNER: str = os.getenv("GITHUB_OWNER", "")
 
 GITHUB_REPO: str = os.getenv("GITHUB_REPO", "")
 """Default repository name for the GitHub tool (e.g. ``fastapi``)."""
+
+# --- Code generation / validation (Stage 4) ---
+CODE_ROUTE_ENABLED: bool = os.getenv("CODE_ROUTE_ENABLED", "0") == "1"
+"""Arm the opt-in code route (PLAN §7.2 T3).
+
+``0`` (default OFF): the code path is never reached through query routing —
+only an explicit per-request opt-in (``explicit_code=True``) can take it.
+``1`` arms the classifier-driven route: queries that look like code requests
+(``CODE_INTENT_PHRASES``) may be answered with generated code.  Non-code
+queries always fall back to the standard answer path, byte-identical to the
+levers-off baseline."""
+
+CODE_VALIDATE_MAX_TURNS: int = int(os.getenv("CODE_VALIDATE_MAX_TURNS", "2"))
+"""Maximum validation/reformulation iterations on the code route.
+
+The T4 loop generates code, validates it with the ``CodeValidator`` and, on
+a failed verdict, feeds the failure reasons back for one rewrite per turn.
+After ``CODE_VALIDATE_MAX_TURNS`` rewrites (so 1 initial + N fixes) a still
+failing output is **not returned** — the route answers with a "couldn't
+validate" refusal plus the retrieved sources (unvalidated code is never
+returned)."""
+
+CODE_INTENT_PHRASES: tuple[str, ...] = (
+    "write code", "write a function", "write a class", "write an example",
+    "generate code", "generate a function", "generate an example",
+    "code snippet", "code example", "example code", "sample code",
+    "show me the code", "show code", "give me the code",
+    "how do i write", "how do i implement", "how can i write",
+    "implement a function", "implement a class", "implementation for",
+)
+"""Deterministic code-intent seed phrases for the code-route classifier.
+
+Matched case-insensitively against the normalised query (same normalisation
+as the agentic gate).  A documented seed list — like the gate's connector
+vocabulary it gets tuned against corpus-observed phrasings, never extended ad
+hoc during a run."""
