@@ -281,15 +281,19 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       refreshes stage status/headers + both ACTIVEs (Stage 3 COMPLETE, Stage
       4 ACTIVE) and creates the Stage-4-start pre-side worktree of DocPilot
       (`/tmp/opencode/s4_parity_pre` @ `34dea0d`)
-- [ ] S4-T2: move mechanically (prefix swap) into `ragkit.codegen` /
+- [x] S4-T2: move mechanically (prefix swap) into `ragkit.codegen` /
       `ragkit.validation` / `ragkit.agent.code_route`; `ragkit.eval` gains
       `code_benchmark` + `code_benchmark.json` (activate `__main__` branch);
       `ragkit.config` gains the 3 `CODE_*` keys; 5 hermetic test files move.
-- [ ] S4-T3: DocPilot dogfood — rewire `api/service.py` code endpoint + CLI
+      — DONE 2026-09-23 (this repo `2dd9bb3`; dataset sha256-identical
+      `ecc1975a…`; app glue via host-wiring hooks; suite 467 passed).
+- [x] S4-T3: DocPilot dogfood — rewire `api/service.py` code endpoint + CLI
       code paths + staying app-level test (`test_api_code.py`) to
       `ragkit.codegen` / `ragkit.validation` / `ragkit.agent.code_route`;
       delete moved modules + tests; config re-exports the 3 `CODE_*` keys;
-      pin bump; combined suite green.
+      pin bump; combined suite green. — DONE 2026-09-23 (DocPilot
+      `c1d3664` ticks §8.9; pin → `@2dd9bb3`; combined 552: DocPilot 84 +
+      ragkit 468).
 - [ ] S4-T4: codegen parity evidence — hermetic determinism harness: stubbed
       generator/judge — validation verdicts + emitted code identical pre
       (`docpilot.*` @ Stage-4 start worktree) vs post (`ragkit.*`); + one
