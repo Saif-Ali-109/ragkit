@@ -6,9 +6,11 @@ authority: derived — SPEC.md wins on conflict
 ## 1. status
 
 - origin: extracted from DocPilot (Phases 1–6 COMPLETE, 2026-09-12)
-- current: **Stage 2 — agentic, COMPLETE 2026-09-18 (`v0.2.0`; both repos
-  pushed). Next: Stage 3 — eval harness (planned §4), then Stage 4 — codegen
-  (§5) — both start on user go.**
+- current: **Stage 4 — codegen, ACTIVE 2026-09-23** (Stage 3 — eval harness
+  COMPLETE 2026-09-19, `v0.3.0`; Stage 2 — agentic COMPLETE 2026-09-18,
+  `v0.2.0`; Stage 1 — core chain COMPLETE 2026-09-18, `v0.1.0`; each tagged +
+  pushed, DocPilot pinned). Stage 4 (§5) is the **final** extraction stage —
+  all §8.4 deferred bundles move.
 - source-of-truth extraction plan: DocPilot PLAN §8
   (<https://github.com/Saif-Ali-109/DocPilot/blob/main/PLAN.md>)
 
@@ -96,7 +98,7 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
 - [x] version pairing recorded (DocPilot pin `@v0.1.0` ↔ ragkit tag
       `v0.1.0`); both repos pushed; no secrets
 
-## 3. Stage 2 — agentic (ACTIVE 2026-09-18)
+## 3. Stage 2 — agentic (COMPLETE 2026-09-18, v0.2.0)
 
 ### 3.1 scope (move set, from DocPilot `src/docpilot/`)
 - `agent/__init__.py`, `agent/gate.py`, `agent/graph.py`, `agent/interface.py`,
@@ -154,7 +156,7 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       from the tag verified; dirty eval reports + `opencode.jsonc`
       remain uncommitted on the DocPilot side
 
-## 4. Stage 3 — eval harness (PLANNED 2026-09-18 — start on user go)
+## 4. Stage 3 — eval harness (COMPLETE 2026-09-19, v0.3.0)
 
 ### 4.1 scope (move set, from DocPilot `src/docpilot/`)
 
@@ -244,7 +246,7 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
 - [x] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.3.0`);
       READMEs honest; both repos pushed; no secrets — DONE: S3-T5
 
-## 5. Stage 4 — codegen (PLANNED 2026-09-18 — start after Stage 3 closes)
+## 5. Stage 4 — codegen (ACTIVE 2026-09-23)
 
 ### 5.1 scope (move set, from DocPilot `src/docpilot/`)
 
@@ -273,8 +275,12 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
 
 ### 5.2 tasks (execution order)
 
-- [ ] S4-T1: docs — this section (ragkit PLAN §5 / DocPilot PLAN §8.9) +
-      ACTIVE refresh, committed in both repos.
+- [x] S4-T1: docs — this section (ragkit PLAN §5 / DocPilot PLAN §8.9) +
+      ACTIVE refresh, committed in both repos. — DONE 2026-09-23: §5 / §8.9
+      scope+tasks were pre-written in `b8f35b5`/`6122c8c`; this commit
+      refreshes stage status/headers + both ACTIVEs (Stage 3 COMPLETE, Stage
+      4 ACTIVE) and creates the Stage-4-start pre-side worktree of DocPilot
+      (`/tmp/opencode/s4_parity_pre` @ `34dea0d`)
 - [ ] S4-T2: move mechanically (prefix swap) into `ragkit.codegen` /
       `ragkit.validation` / `ragkit.agent.code_route`; `ragkit.eval` gains
       `code_benchmark` + `code_benchmark.json` (activate `__main__` branch);
