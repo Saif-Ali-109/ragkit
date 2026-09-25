@@ -246,7 +246,7 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
 - [x] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.3.0`);
       READMEs honest; both repos pushed; no secrets — DONE: S3-T5
 
-## 5. Stage 4 — codegen (ACTIVE 2026-09-23)
+## 5. Stage 4 — codegen (COMPLETE 2026-09-23 `v0.4.0` — extraction complete)
 
 ### 5.1 scope (move set, from DocPilot `src/docpilot/`)
 
@@ -302,21 +302,27 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       validation / code_route / code_benchmark payloads **IDENTICAL**
       pre `34dea0d` vs post `127cfb0`; `s4_codegen_parity_report.md` + one
       live Groq smoke `s4_codegen_smoke.txt` — PASS (3 checks), 1 attempt).
-- [ ] S4-T5: exit sweep — READMEs honest, clean-venv install from git
+- [x] S4-T5: exit sweep — READMEs honest, clean-venv install from git
       (regression), tag `v0.4.0`, DocPilot pin → `@v0.4.0`, §5.3 / §8.9b all
       `[x]`, both repos pushed, no secrets; **all §8.4 bundles moved →
-      extraction complete**.
+      extraction complete**. — DONE 2026-09-23 (READMEs Stage-4 honest in
+      both repos — ragkit "Stage 4 (codegen) complete, `v0.4.0` —
+      extraction complete"; clean venv from
+      `git+…ragkit.git@v0.4.0` OK; tag `v0.4.0`; DocPilot pin → `@v0.4.0`;
+      §5.3 / §8.9b all `[x]`; both pushed; no secrets; all §8.4 bundles
+      moved → extraction complete).
 
 ### 5.3 exit criteria (checked at stage close)
 
-- [ ] ragkit standalone test suite green (codegen/validation/code_route tests
-      included, hermetic)
-- [ ] combined DocPilot + ragkit suite green; moved tests live in ragkit only
-- [ ] codegen parity evidence committed (hermetic harness verdict + live
-      smoke output)
-- [ ] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.4.0`);
+- [x] ragkit standalone test suite green (codegen/validation/code_route tests
+      included, hermetic) — DONE: ragkit 467 passed/1 skipped
+- [x] combined DocPilot + ragkit suite green; moved tests live in ragkit
+      only — DONE: DocPilot 84 + ragkit 468 = 552
+- [x] codegen parity evidence committed (hermetic harness verdict + live
+      smoke output) — DONE: S4-T4, `parity/s4_codegen_*`
+- [x] version pairing recorded (DocPilot pin ↔ ragkit tag `v0.4.0`);
       READMEs honest; both repos pushed; no secrets; all deferred bundles
-      moved
+      moved — DONE: extraction complete
 
 ## 6. git workflow
 

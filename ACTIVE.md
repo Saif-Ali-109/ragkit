@@ -6,15 +6,17 @@ load: read whole
 
 ## 1. Status
 
-- current_stage: **Stage 4 — codegen, ACTIVE 2026-09-23** (Stage 3 — eval
-  harness COMPLETE 2026-09-19 `v0.3.0`; Stage 2 — agentic COMPLETE 2026-09-18
-  `v0.2.0`; Stage 1 — core chain COMPLETE 2026-09-18 `v0.1.0` — each tagged
-  and pushed, DocPilot pinned). Stage 4 = **final** extraction stage (§5).
+- current_stage: **Stage 4 — codegen COMPLETE 2026-09-23 `v0.4.0` —
+  extraction complete** (Stage 3 — eval harness COMPLETE 2026-09-19
+  `v0.3.0`; Stage 2 — agentic COMPLETE 2026-09-18 `v0.2.0`; Stage 1 — core
+  chain COMPLETE 2026-09-18 `v0.1.0` — each tagged and pushed, DocPilot
+  pinned). Stage 4 was the **final** extraction stage (§5); all §8.4
+  bundles now moved.
 - last_updated: 2026-09-23
-- test baseline: combined 552 (pre-extraction); current split ragkit 410 +
-  DocPilot 142 (unit tests relocated zero loss; live-PG integration tests run
-  when the gitignored repo-root `.env` is present, else hermetic-skip:
-  totals unchanged)
+- test baseline: combined 552 (pre-extraction); current split ragkit 468 +
+  DocPilot 84 (467 passed/1 skipped + 84; unit tests relocated zero loss;
+  live-PG integration tests run when the gitignored repo-root `.env` is
+  present, else hermetic-skip: totals unchanged)
 - gate reference: combined DocPilot + ragkit suite ≥ 552 (locked 2026-09-18;
   unit tests live in ragkit only; the ragkit conftest optionally loads the
   repo-root `.env` — gitignored — so live-PG integration tests run when
@@ -125,13 +127,31 @@ load: read whole
   pre-written (`b8f35b5`/`6122c8c`); this refresh: stage headers honest
   (Stage 4 ACTIVE), both ACTIVEs updated, and the Stage-4-start pre-side
   worktree created (`/tmp/opencode/s4_parity_pre` @ DocPilot `34dea0d`).
-  Next: S4-T2 — mechanical move.
-- Stage 4 (final, §5) moves `codegen/*`, `validation/*`,
-  `agent/code_route.py`, `eval/code_benchmark.py` + `code_benchmark.json` →
+- 2026-09-23 S4-T2: mechanical move — `docpilot.codegen` → `ragkit.codegen`,
+  `docpilot.validation` → `ragkit.validation`, `docpilot.agent.code_route` →
+  `ragkit.agent.code_route`, `docpilot.eval.code_benchmark` +
+  `docpilot.eval.dataset.code_benchmark` → `ragkit.eval` (activates the
+  code-benchmark `__main__` lazy-guard); three `CODE_*` keys → `ragkit.config`;
+  5 hermetic test files moved (`test_api_code.py` stays DocPilot-side). `2dd9bb3`
+  — ragkit 467 passed/1 skipped (468 collected).
+- 2026-09-23 S4-T3: DocPilot dogfood — `src/docpilot/` rewired to
   `ragkit.codegen` / `ragkit.validation` / `ragkit.agent.code_route` /
-  `ragkit.eval` (activates the code-benchmark `__main__` lazy-guard); 3
-  CODE_* config keys; 5 hermetic test files move. Gate: full parity harness
-  + 1 live codegen smoke. After S4-T5: extraction complete.
+  `ragkit.eval`; moved modules + 5 test files deleted; config re-exports the
+  3 `CODE_*` keys; pin → `@2dd9bb3`. `c1d3664` — DocPilot 84 + ragkit 468
+  = 552.
+- 2026-09-23 S4-T4: codegen parity evidence — hermetic determinism harness
+  `parity/s4_codegen_parity.py` + `compare_s4_codegen.py`: stubbed
+  generator/judge, scripted components — codegen (valid+refused), validation
+  verdicts (incl. SKIP path), code_route (fallback/validated/refused),
+  code_benchmark (6 rows, sha256 `ecc1975a…`): **IDENTICAL** pre
+  `docpilot.*`@`34dea0d` vs post `ragkit.*`@`127cfb0`; + one live TPD-aware
+  Groq smoke `parity/s4_codegen_smoke.txt` (1 code block, PASS 3 checks,
+  5 sources, 1 attempt). Evidence in `parity/s4_codegen_*`.
+- 2026-09-23 S4-T5: exit sweep — READMEs honest (ragkit Stage 4 `v0.4.0` —
+  extraction complete), clean-venv install from git `@v0.4.0` (deps
+  unchanged vs `v0.3.0`; `docpilot` not importable), tag `v0.4.0`, DocPilot
+  pin → `@v0.4.0`, §5.3 / §8.9b all `[x]`, both repos pushed. **Stage 4
+  COMPLETE — extraction complete (all §8.4 bundles moved).**
 
 ## 3. Load index
 
@@ -141,10 +161,10 @@ load: read whole
 | PLAN.md | §2 Stage 1 | stage-1 work |
 | PLAN.md | §3 Stage 2 | stage-2 work (agentic) |
 | PLAN.md | §4 Stage 3 | stage-3 work (eval, done) |
-| PLAN.md | §5 Stage 4 | stage-4 work (codegen, ACTIVE) |
-| DocPilot PLAN §8 | 1231–1536 | always — source-of-truth extraction plan (Stages 1–4) |
+| PLAN.md | §5 Stage 4 | stage-4 work (codegen, done) |
+| DocPilot PLAN §8 | 1231–1560 | always — source-of-truth extraction plan (Stages 1–4) |
 | DocPilot PLAN §8.8 | 1440–1495 | stage-3 work (eval, done) |
-| DocPilot PLAN §8.9 | 1496–1536 | stage-4 work (codegen, ACTIVE) |
+| DocPilot PLAN §8.9 | 1496–1560 | stage-4 work (codegen, done) |
 
 ## 4. Refresh rules
 
