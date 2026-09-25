@@ -1,0 +1,25 @@
+$ python /tmp/opencode/s4_smoke.py  (one live codegen invocation — S4-T4 "one live smoke" budget)
+(post-extraction stack: DocPilot c1d3664 + ragkit 127cfb0; host wiring registered by
+ docpilot; live PG corpus 15.3k chunks; Groq generator; explicit code opt-in)
+
+question      : Write a minimal FastAPI application with a GET endpoint that returns 'Hello, World'.
+decision      : True (explicit code opt-in)
+code emitted  : 1 block(s)
+validated     : PASS (3 checks)
+validation    : passed=True failed=False
+sources       : 5 source(s)
+attempts      : 1
+--- answer ---
+```Python
+# [1]
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+def read_root():
+    return "Hello, World"
+```
+
+This minimal FastAPI application creates an `app` instance, defines a single GET endpoint at the root path (`/`), and returns the string `"Hello, World"` when the endpoint is accessed. The code follows the pattern shown in the documentation examples for creating a FastAPI app and defining a route.

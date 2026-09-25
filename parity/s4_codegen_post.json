@@ -1,0 +1,570 @@
+{
+  "code_benchmark": {
+    "dataset_path": "-",
+    "generated_at": "2026-09-23T00:00:00",
+    "metrics": {
+      "avg_latency_ms": 94.2,
+      "avg_validation_turns": 1.333,
+      "citation_gold_accuracy": 1.0,
+      "citation_n": 5,
+      "compiles_rate": 1.0,
+      "gold_import_usage_rate": 1.0,
+      "gold_surface_usage": 0.0667,
+      "imports_grounded_rate": 0.6,
+      "refusal_accuracy": 1.0,
+      "refusal_n": 6,
+      "surface_grounded_rate": 0.6,
+      "validation_n": 5,
+      "validation_pass_rate": 0.6
+    },
+    "note": "code eval over 6 request(s); citation_gold_accuracy uses the main benchmark's marker\u2192source logic (comparable over overlap)",
+    "pipeline": "code",
+    "rows": [
+      {
+        "answer": "Here is the code [1]:\n\n```python\nimport fastapi\n\napp = None\n\n```",
+        "citation_gold_accuracy": 1.0,
+        "compiles": true,
+        "id": "c01",
+        "imports_grounded": false,
+        "latency_ms": 100.0,
+        "marker_count": 1,
+        "refusal_ok": true,
+        "refused": false,
+        "source_files": [
+          "en/docs/tutorial/first-steps.md"
+        ],
+        "surface_grounded": false,
+        "used_gold_imports": true,
+        "used_gold_surface": 0.3333,
+        "validation_pass": false,
+        "validation_turns": 2
+      },
+      {
+        "answer": "Here is the code [1]:\n\n```python\nimport fastapi\n\napp = None\n\n```",
+        "citation_gold_accuracy": 1.0,
+        "compiles": true,
+        "id": "c02",
+        "imports_grounded": true,
+        "latency_ms": 101.0,
+        "marker_count": 1,
+        "refusal_ok": true,
+        "refused": false,
+        "source_files": [
+          "en/docs/tutorial/query-params.md"
+        ],
+        "surface_grounded": true,
+        "used_gold_imports": true,
+        "used_gold_surface": 0.0,
+        "validation_pass": true,
+        "validation_turns": 1
+      },
+      {
+        "answer": "Here is the code [1]:\n\n```python\nimport fastapi, pydantic\n\napp = None\n\n```",
+        "citation_gold_accuracy": 1.0,
+        "compiles": true,
+        "id": "c03",
+        "imports_grounded": true,
+        "latency_ms": 102.0,
+        "marker_count": 1,
+        "refusal_ok": true,
+        "refused": false,
+        "source_files": [
+          "en/docs/tutorial/response-model.md"
+        ],
+        "surface_grounded": true,
+        "used_gold_imports": true,
+        "used_gold_surface": 0.0,
+        "validation_pass": true,
+        "validation_turns": 1
+      },
+      {
+        "answer": "Here is the code [1]:\n\n```python\nimport fastapi\n\napp = None\n\n```",
+        "citation_gold_accuracy": 1.0,
+        "compiles": true,
+        "id": "c04",
+        "imports_grounded": false,
+        "latency_ms": 103.0,
+        "marker_count": 1,
+        "refusal_ok": true,
+        "refused": false,
+        "source_files": [
+          "en/docs/tutorial/middleware.md"
+        ],
+        "surface_grounded": false,
+        "used_gold_imports": true,
+        "used_gold_surface": 0.0,
+        "validation_pass": false,
+        "validation_turns": 2
+      },
+      {
+        "answer": "Here is the code [1]:\n\n```python\nimport fastapi\n\napp = None\n\n```",
+        "citation_gold_accuracy": 1.0,
+        "compiles": true,
+        "id": "c05",
+        "imports_grounded": true,
+        "latency_ms": 104.0,
+        "marker_count": 1,
+        "refusal_ok": true,
+        "refused": false,
+        "source_files": [
+          "en/docs/tutorial/background-tasks.md"
+        ],
+        "surface_grounded": true,
+        "used_gold_imports": true,
+        "used_gold_surface": 0.0,
+        "validation_pass": true,
+        "validation_turns": 1
+      },
+      {
+        "answer": "I don't know \u2014 the available documentation does not cover this question.",
+        "citation_gold_accuracy": null,
+        "compiles": null,
+        "id": "c06",
+        "imports_grounded": null,
+        "latency_ms": 55.0,
+        "marker_count": 0,
+        "refusal_ok": true,
+        "refused": true,
+        "source_files": [],
+        "surface_grounded": null,
+        "used_gold_imports": null,
+        "used_gold_surface": null,
+        "validation_pass": null,
+        "validation_turns": 1
+      }
+    ]
+  },
+  "code_route": {
+    "fallback": {
+      "answer": "FastAPI validates path parameters by type.",
+      "ask": {
+        "display": "FastAPI validates path parameters by type.",
+        "sources": [
+          {
+            "file": "en/docs/tutorial/first-steps.md",
+            "heading": "First Steps",
+            "kind": "tutorial",
+            "ref": 1
+          },
+          {
+            "file": "en/docs/tutorial/first-steps.md",
+            "heading": "First Steps",
+            "kind": "tutorial",
+            "ref": 2
+          }
+        ]
+      },
+      "code": null,
+      "decision": {
+        "code": false,
+        "reason": "code route not armed (CODE_ROUTE_ENABLED off)"
+      },
+      "generator_answer_calls": 1,
+      "retriever_calls": [
+        [
+          "What are the validation rules for FastAPI path parameters?",
+          5,
+          "en"
+        ]
+      ]
+    },
+    "refused": {
+      "answer": "I couldn't validate the generated code against the retrieved documentation, so I'm not returning code.\n\nSources:\n[1] en/docs/tutorial/first-steps.md (tutorial) \u2192 First Steps\n[2] en/docs/tutorial/first-steps.md (tutorial) \u2192 First Steps",
+      "ask": null,
+      "code": {
+        "answer": "I couldn't validate the generated code against the retrieved documentation, so I'm not returning code.",
+        "block_verdicts": [
+          {
+            "checks": [
+              [
+                "parse",
+                "pass",
+                "parses cleanly"
+              ],
+              [
+                "imports_evidence",
+                "fail",
+                "import(s) not grounded in retrieved evidence: Flask"
+              ],
+              [
+                "symbols_evidence",
+                "pass",
+                "all external symbols present in retrieved evidence"
+              ]
+            ],
+            "passed": false
+          }
+        ],
+        "code_blocks": [
+          "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef index():\n    return \"hello\""
+        ],
+        "footer": "Sources:\n[1] en/docs/tutorial/first-steps.md (tutorial) \u2192 First Steps\n[2] en/docs/tutorial/first-steps.md (tutorial) \u2192 First Steps",
+        "generation_attempts": 3,
+        "latency_ms": 0.0,
+        "question": "Write a minimal FastAPI application with a GET endpoint.",
+        "raw_prompt": "You are DocPilot's code generator.  A previous code attempt failed validation\nand must be rewritten so that it is grounded ONLY in the retrieved\ndocumentation context below.\n\nVALIDATION FAILURES FROM THE PREVIOUS ATTEMPT:\n- import(s) not grounded in retrieved evidence: Flask\n\nRULES:\n1. Rewrite the code so every failure listed above is fixed.  Do not change\n   anything the failures do not require \u2014 keep correct code as-is.\n2. Write code using ONLY the APIs, schemas and examples shown in CONTEXT.  Do\n   not use outside knowledge or invent symbols that are not documented.\n3. Emit your code inside fenced code blocks.  Cite every code block with the\n   numbered source(s) it was derived from by placing [N] markers on the line\n   directly above the block (or next to the API use inside it).  Only cite\n   sources that were provided.\n4. Copy identifiers exactly as documented: names, imports, signatures,\n   field/schema names and defaults.\n5. After each code block, add a short plain-prose explanation citing the\n   sources behind that code.\n6. If CONTEXT contains no API/schema/examples that can satisfy the request,\n   say exactly: \"I don't know \u2014 the available documentation does not cover\n   this question.\" and emit no code at all.\n7. When several sources cover the same API, prefer the most specific,\n   authoritative and stable file: tutorial / advanced / reference sections\n   over index or overview pages (a file's kind is shown in parentheses next\n   to it in SOURCES).\n\nCONTEXT:\n[1] # FastAPI \u2014 basic app\n\nCreate an application with the `FastAPI` class:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n```\n\nA path operation decorator (`@app.get`) registers a handler. Handlers are plain\nfunctions; the return value is serialized as JSON.\n\nServe it locally with uvicorn:\n\n```python\nimport uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n```\n\n[2] from fastapi import FastAPI\n\napp = FastAPI()\n\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n\nSOURCES:\n[1] en/docs/tutorial/first-steps.md (tutorial) \u2192 First Steps\n[2] en/docs/tutorial/first-steps.md (tutorial) \u2192 First Steps\n\nREQUEST:\nWrite a minimal FastAPI application with a GET endpoint.\n",
+        "raw_response": "Here is the app [1]:\n\n```python\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef index():\n    return \"hello\"\n```\n",
+        "refused": false,
+        "results": [
+          {
+            "file": "en/docs/tutorial/first-steps.md",
+            "heading": "First Steps",
+            "id": "c1",
+            "score": 0.9
+          },
+          {
+            "file": "en/docs/tutorial/first-steps.md",
+            "heading": "First Steps",
+            "id": "c2",
+            "score": 0.9
+          }
+        ],
+        "retrieval_latency_ms": 0.0,
+        "sources": [
+          {
+            "file": "en/docs/tutorial/first-steps.md",
+            "heading": "First Steps",
+            "kind": "tutorial",
+            "ref": 1
+          },
+          {
+            "file": "en/docs/tutorial/first-steps.md",
+            "heading": "First Steps",
+            "kind": "tutorial",
+            "ref": 2
+          }
+        ],
+        "validation_failed": true,
+        "validation_reasons": [
+          "import(s) not grounded in retrieved evidence: Flask"
+        ],
+        "verdict": {
+          "checks": [
+            [
+              "block[0].parse",
+              "pass",
+              "parses cleanly"
+            ],
+            [
+              "block[0].imports_evidence",
+              "fail",
+              "import(s) not grounded in retrieved evidence: Flask"
+            ],
+            [
+              "block[0].symbols_evidence",
+              "pass",
+              "all external symbols present in retrieved evidence"
+            ]
+          ],
+          "passed": false
+        }
+      },
+      "decision": {
+        "code": true,
+        "reason": "explicit code opt-in"
+      }
+    },
+    "validated": {
+      "answer": "Here is a minimal FastAPI app from the tutorial [1]:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n```\n\nServe it locally with uvicorn [2]:\n\n```python\nimport uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n```\n\n\nSources:\n[1] en/docs/tutorial/first-steps.md \u2192 First Steps\n[2] en/docs/tutorial/first-steps.md \u2192 First Steps",
+      "ask": null,
+      "code": {
+        "answer": "Here is a minimal FastAPI app from the tutorial [1]:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n```\n\nServe it locally with uvicorn [2]:\n\n```python\nimport uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n```\n",
+        "block_verdicts": [
+          {
+            "checks": [
+              [
+                "parse",
+                "pass",
+                "parses cleanly"
+              ],
+              [
+                "imports_evidence",
+                "pass",
+                "all imports grounded in evidence or stdlib"
+              ],
+              [
+                "symbols_evidence",
+                "pass",
+                "all external symbols present in retrieved evidence"
+              ]
+            ],
+            "passed": true
+          },
+          {
+            "checks": [
+              [
+                "parse",
+                "pass",
+                "parses cleanly"
+              ],
+              [
+                "imports_evidence",
+                "pass",
+                "all imports grounded in evidence or stdlib"
+              ],
+              [
+                "symbols_evidence",
+                "pass",
+                "all external symbols present in retrieved evidence"
+              ]
+            ],
+            "passed": true
+          }
+        ],
+        "code_blocks": [
+          "from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}",
+          "import uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)"
+        ],
+        "footer": "Sources:\n[1] en/docs/tutorial/first-steps.md \u2192 First Steps\n[2] en/docs/tutorial/first-steps.md \u2192 First Steps",
+        "generation_attempts": 1,
+        "latency_ms": 0.0,
+        "question": "Write a minimal FastAPI application with a GET endpoint.",
+        "raw_prompt": "You are DocPilot's code generator and write working Python code samples grounded\nONLY in the retrieved documentation context below.\n\nRULES:\n1. Write code using ONLY the APIs, schemas and examples shown in CONTEXT. Do\n   not use outside knowledge or invent symbols that are not documented.\n2. Emit your code inside fenced code blocks. Cite every code block with the\n   numbered source(s) it was derived from by placing [N] markers on the line\n   directly above the block (or next to the API use inside it). Only cite\n   sources that were provided.\n3. Copy identifiers exactly as documented: names, imports, signatures,\n   field/schema names and defaults. Never reconstruct, extend or embellish\n   examples from outside the context.\n4. After each code block, add a short plain-prose explanation citing the\n   sources behind that code.\n5. If CONTEXT contains no API/schema/examples that can satisfy the request,\n   say exactly: \"I don't know \u2014 the available documentation does not cover\n   this question.\" and emit no code at all.\n6. When several sources cover the same API, prefer the most specific,\n   authoritative and stable file: tutorial / advanced / reference sections\n   over index or overview pages (a file's kind is shown in parentheses next\n   to it in SOURCES).\n\nCONTEXT:\n[1] # FastAPI \u2014 basic app\n\nCreate an application with the `FastAPI` class:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n```\n\nA path operation decorator (`@app.get`) registers a handler. Handlers are plain\nfunctions; the return value is serialized as JSON.\n\nServe it locally with uvicorn:\n\n```python\nimport uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n```\n\n[2] from fastapi import FastAPI\n\napp = FastAPI()\n\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n\nSOURCES:\n[1] en/docs/tutorial/first-steps.md (tutorial) \u2192 First Steps\n[2] en/docs/tutorial/first-steps.md (tutorial) \u2192 First Steps\n\nREQUEST:\nWrite a minimal FastAPI application with a GET endpoint.\n",
+        "raw_response": "Here is a minimal FastAPI app from the tutorial [1]:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n```\n\nServe it locally with uvicorn [2]:\n\n```python\nimport uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n```\n",
+        "refused": false,
+        "results": [
+          {
+            "file": "en/docs/tutorial/first-steps.md",
+            "heading": "First Steps",
+            "id": "c1",
+            "score": 0.9
+          },
+          {
+            "file": "en/docs/tutorial/first-steps.md",
+            "heading": "First Steps",
+            "id": "c2",
+            "score": 0.9
+          }
+        ],
+        "retrieval_latency_ms": 0.0,
+        "sources": [
+          {
+            "file": "en/docs/tutorial/first-steps.md",
+            "heading": "First Steps",
+            "kind": "tutorial",
+            "ref": 1
+          },
+          {
+            "file": "en/docs/tutorial/first-steps.md",
+            "heading": "First Steps",
+            "kind": "tutorial",
+            "ref": 2
+          }
+        ],
+        "validation_failed": false,
+        "validation_reasons": [],
+        "verdict": {
+          "checks": [
+            [
+              "block[0].parse",
+              "pass",
+              "parses cleanly"
+            ],
+            [
+              "block[0].imports_evidence",
+              "pass",
+              "all imports grounded in evidence or stdlib"
+            ],
+            [
+              "block[0].symbols_evidence",
+              "pass",
+              "all external symbols present in retrieved evidence"
+            ],
+            [
+              "block[1].parse",
+              "pass",
+              "parses cleanly"
+            ],
+            [
+              "block[1].imports_evidence",
+              "pass",
+              "all imports grounded in evidence or stdlib"
+            ],
+            [
+              "block[1].symbols_evidence",
+              "pass",
+              "all external symbols present in retrieved evidence"
+            ]
+          ],
+          "passed": true
+        }
+      },
+      "decision": {
+        "code": true,
+        "reason": "explicit code opt-in"
+      }
+    }
+  },
+  "codegen": {
+    "refused": {
+      "answer": "I don't know \u2014 the available documentation does not cover this question.",
+      "block_verdicts": [],
+      "code_blocks": [],
+      "footer": "",
+      "generation_attempts": 1,
+      "latency_ms": 0.0,
+      "question": "Write code for a Django model.",
+      "raw_prompt": "You are DocPilot's code generator and write working Python code samples grounded\nONLY in the retrieved documentation context below.\n\nRULES:\n1. Write code using ONLY the APIs, schemas and examples shown in CONTEXT. Do\n   not use outside knowledge or invent symbols that are not documented.\n2. Emit your code inside fenced code blocks. Cite every code block with the\n   numbered source(s) it was derived from by placing [N] markers on the line\n   directly above the block (or next to the API use inside it). Only cite\n   sources that were provided.\n3. Copy identifiers exactly as documented: names, imports, signatures,\n   field/schema names and defaults. Never reconstruct, extend or embellish\n   examples from outside the context.\n4. After each code block, add a short plain-prose explanation citing the\n   sources behind that code.\n5. If CONTEXT contains no API/schema/examples that can satisfy the request,\n   say exactly: \"I don't know \u2014 the available documentation does not cover\n   this question.\" and emit no code at all.\n6. When several sources cover the same API, prefer the most specific,\n   authoritative and stable file: tutorial / advanced / reference sections\n   over index or overview pages (a file's kind is shown in parentheses next\n   to it in SOURCES).\n\nCONTEXT:\n[no context retrieved \u2014 the documentation may not cover this question.]\n\nSOURCES:\n\n\nREQUEST:\nWrite code for a Django model.\n",
+      "raw_response": "I don't know \u2014 the available documentation does not cover this question.",
+      "refused": true,
+      "results": [],
+      "retrieval_latency_ms": 0.0,
+      "sources": [],
+      "validation_failed": false,
+      "validation_reasons": [],
+      "verdict": null
+    },
+    "valid": {
+      "answer": "Here is a minimal FastAPI app from the tutorial [1]:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n```\n\nServe it locally with uvicorn [2]:\n\n```python\nimport uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n```\n",
+      "block_verdicts": [],
+      "code_blocks": [
+        "from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}",
+        "import uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)"
+      ],
+      "footer": "Sources:\n[1] en/docs/tutorial/first-steps.md \u2192 First Steps\n[2] en/docs/tutorial/first-steps.md \u2192 First Steps",
+      "generation_attempts": 1,
+      "latency_ms": 0.0,
+      "question": "Write a minimal FastAPI application with a GET endpoint.",
+      "raw_prompt": "You are DocPilot's code generator and write working Python code samples grounded\nONLY in the retrieved documentation context below.\n\nRULES:\n1. Write code using ONLY the APIs, schemas and examples shown in CONTEXT. Do\n   not use outside knowledge or invent symbols that are not documented.\n2. Emit your code inside fenced code blocks. Cite every code block with the\n   numbered source(s) it was derived from by placing [N] markers on the line\n   directly above the block (or next to the API use inside it). Only cite\n   sources that were provided.\n3. Copy identifiers exactly as documented: names, imports, signatures,\n   field/schema names and defaults. Never reconstruct, extend or embellish\n   examples from outside the context.\n4. After each code block, add a short plain-prose explanation citing the\n   sources behind that code.\n5. If CONTEXT contains no API/schema/examples that can satisfy the request,\n   say exactly: \"I don't know \u2014 the available documentation does not cover\n   this question.\" and emit no code at all.\n6. When several sources cover the same API, prefer the most specific,\n   authoritative and stable file: tutorial / advanced / reference sections\n   over index or overview pages (a file's kind is shown in parentheses next\n   to it in SOURCES).\n\nCONTEXT:\n[1] # FastAPI \u2014 basic app\n\nCreate an application with the `FastAPI` class:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n```\n\nA path operation decorator (`@app.get`) registers a handler. Handlers are plain\nfunctions; the return value is serialized as JSON.\n\nServe it locally with uvicorn:\n\n```python\nimport uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n```\n\n[2] from fastapi import FastAPI\n\napp = FastAPI()\n\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n\nSOURCES:\n[1] en/docs/tutorial/first-steps.md (tutorial) \u2192 First Steps\n[2] en/docs/tutorial/first-steps.md (tutorial) \u2192 First Steps\n\nREQUEST:\nWrite a minimal FastAPI application with a GET endpoint.\n",
+      "raw_response": "Here is a minimal FastAPI app from the tutorial [1]:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n```\n\nServe it locally with uvicorn [2]:\n\n```python\nimport uvicorn\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n```\n",
+      "refused": false,
+      "results": [
+        {
+          "file": "en/docs/tutorial/first-steps.md",
+          "heading": "First Steps",
+          "id": "c1",
+          "score": 0.9
+        },
+        {
+          "file": "en/docs/tutorial/first-steps.md",
+          "heading": "First Steps",
+          "id": "c2",
+          "score": 0.9
+        }
+      ],
+      "retrieval_latency_ms": 0.0,
+      "sources": [
+        {
+          "file": "en/docs/tutorial/first-steps.md",
+          "heading": "First Steps",
+          "kind": "tutorial",
+          "ref": 1
+        },
+        {
+          "file": "en/docs/tutorial/first-steps.md",
+          "heading": "First Steps",
+          "kind": "tutorial",
+          "ref": 2
+        }
+      ],
+      "validation_failed": false,
+      "validation_reasons": [],
+      "verdict": null
+    }
+  },
+  "meta": {
+    "code_benchmark_rows": 6,
+    "dataset_sha": "ecc1975a1914c27ab6f7f1ce394f86b81e580b379af2b6fc7024760a649373dc",
+    "docpilot_sha": "c1d3664",
+    "hermetic": true,
+    "normalized": [
+      "latency_ms (ask_code/code_route set to 0.0)",
+      "generated_at (code_benchmark pinned)"
+    ],
+    "ragkit_sha": "127cfb0",
+    "side": "post",
+    "timestamp": "2026-09-23T16:59:20.158484+00:00"
+  },
+  "validation": {
+    "invalid_syntax": {
+      "checks": [
+        [
+          "parse",
+          "fail",
+          "syntax error: '(' was never closed at line 3"
+        ]
+      ],
+      "passed": false
+    },
+    "invalid_undefined_symbol": {
+      "checks": [
+        [
+          "parse",
+          "pass",
+          "parses cleanly"
+        ],
+        [
+          "imports_evidence",
+          "pass",
+          "all imports grounded in evidence or stdlib"
+        ],
+        [
+          "symbols_evidence",
+          "fail",
+          "symbol(s) not found in retrieved evidence: ThrottleMiddleware"
+        ]
+      ],
+      "passed": false
+    },
+    "invalid_unknown_import": {
+      "checks": [
+        [
+          "parse",
+          "pass",
+          "parses cleanly"
+        ],
+        [
+          "imports_evidence",
+          "fail",
+          "import(s) not grounded in retrieved evidence: Flask"
+        ],
+        [
+          "symbols_evidence",
+          "pass",
+          "all external symbols present in retrieved evidence"
+        ]
+      ],
+      "passed": false
+    },
+    "valid_example": {
+      "checks": [
+        [
+          "parse",
+          "pass",
+          "parses cleanly"
+        ],
+        [
+          "imports_evidence",
+          "pass",
+          "all imports grounded in evidence or stdlib"
+        ],
+        [
+          "symbols_evidence",
+          "pass",
+          "all external symbols present in retrieved evidence"
+        ]
+      ],
+      "passed": true
+    },
+    "valid_example_no_evidence": {
+      "checks": [
+        [
+          "parse",
+          "pass",
+          "parses cleanly"
+        ],
+        [
+          "imports_evidence",
+          "skip",
+          "no retrieved evidence \u2014 import grounding skipped"
+        ],
+        [
+          "symbols_evidence",
+          "skip",
+          "no retrieved evidence \u2014 symbol grounding skipped"
+        ]
+      ],
+      "passed": true
+    }
+  }
+}
