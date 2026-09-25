@@ -294,10 +294,14 @@ App/agent deps (fastapi, chainlit, langgraph) stay DocPilot-side for now.
       pin bump; combined suite green. — DONE 2026-09-23 (DocPilot
       `c1d3664` ticks §8.9; pin → `@2dd9bb3`; combined 552: DocPilot 84 +
       ragkit 468).
-- [ ] S4-T4: codegen parity evidence — hermetic determinism harness: stubbed
+- [x] S4-T4: codegen parity evidence — hermetic determinism harness: stubbed
       generator/judge — validation verdicts + emitted code identical pre
       (`docpilot.*` @ Stage-4 start worktree) vs post (`ragkit.*`); + one
-      live codegen smoke (TPD-aware, one invocation).
+      live codegen smoke (TPD-aware, one invocation). — DONE 2026-09-23
+      (`parity/s4_codegen_parity.py` + `compare_s4_codegen.py`: codegen /
+      validation / code_route / code_benchmark payloads **IDENTICAL**
+      pre `34dea0d` vs post `127cfb0`; `s4_codegen_parity_report.md` + one
+      live Groq smoke `s4_codegen_smoke.txt` — PASS (3 checks), 1 attempt).
 - [ ] S4-T5: exit sweep — READMEs honest, clean-venv install from git
       (regression), tag `v0.4.0`, DocPilot pin → `@v0.4.0`, §5.3 / §8.9b all
       `[x]`, both repos pushed, no secrets; **all §8.4 bundles moved →
